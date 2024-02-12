@@ -1,0 +1,138 @@
+{
+  "id": "ideas",
+  "type": "SharedSlice",
+  "name": "Ideas",
+  "description": "Ideas",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Ideas",
+      "primary": {
+        "subtittle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "subtittle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "tittle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "tittle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "buttontext": {
+          "type": "Text",
+          "config": {
+            "label": "buttonText",
+            "placeholder": ""
+          }
+        },
+        "buttonlink": {
+          "type": "Link",
+          "config": {
+            "label": "buttonLink",
+            "placeholder": "",
+            "select": null
+          }
+        },
+        "bgcolorInitial": {
+          "type": "Color",
+          "config": {
+            "label": "bgColorInitial",
+            "placeholder": ""
+          }
+        },
+        "bgcolorend": {
+          "type": "Color",
+          "config": {
+            "label": "bgColorEnd",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "noButtonNobg",
+      "name": "noButtonNobg",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Ideas",
+      "primary": {
+        "subtittle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "subtittle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "tittle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "tittle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "noButton",
+      "name": "noButton",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Ideas",
+      "primary": {
+        "subtittle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "subtittle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "tittle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "tittle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "bgcolorInitial": {
+          "type": "Color",
+          "config": {
+            "label": "bgColorInitial",
+            "placeholder": ""
+          }
+        },
+        "bgcolorend": {
+          "type": "Color",
+          "config": {
+            "label": "bgColorEnd",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

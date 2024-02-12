@@ -1,0 +1,142 @@
+{
+  "id": "clients",
+  "type": "SharedSlice",
+  "name": "Comparative",
+  "description": "Clients",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Clients",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,heading3"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "description",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3,heading4,heading5,strong,em"
+          }
+        },
+        "description": {
+          "type": "Text",
+          "config": {
+            "label": "description",
+            "placeholder": ""
+          }
+        },
+        "ico": {
+          "type": "Image",
+          "config": {
+            "label": "ico1",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "description1": {
+          "type": "Text",
+          "config": {
+            "label": "description1",
+            "placeholder": ""
+          }
+        },
+        "ico2": {
+          "type": "Image",
+          "config": {
+            "label": "ico2",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "description2": {
+          "type": "Text",
+          "config": {
+            "label": "description2",
+            "placeholder": ""
+          }
+        },
+        "ico3": {
+          "type": "Image",
+          "config": {
+            "label": "ico3",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "description3": {
+          "type": "Text",
+          "config": {
+            "label": "description3",
+            "placeholder": ""
+          }
+        },
+        "ico4": {
+          "type": "Image",
+          "config": {
+            "label": "ico4",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "description4": {
+          "type": "Text",
+          "config": {
+            "label": "description4",
+            "placeholder": ""
+          }
+        },
+        "ico5": {
+          "type": "Image",
+          "config": {
+            "label": "ico5",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "description5": {
+          "type": "Text",
+          "config": {
+            "label": "description5",
+            "placeholder": ""
+          }
+        },
+        "buttontext": {
+          "type": "Text",
+          "config": {
+            "label": "buttontext",
+            "placeholder": ""
+          }
+        },
+        "buttonlink": {
+          "type": "Link",
+          "config": {
+            "label": "buttonlink",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

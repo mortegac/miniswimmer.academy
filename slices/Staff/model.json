@@ -1,0 +1,67 @@
+{
+  "id": "staff",
+  "type": "SharedSlice",
+  "name": "Staff",
+  "description": "Staff",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Staff",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,heading3,heading4,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        }
+      },
+      "items": {
+        "image": {
+          "type": "Image",
+          "config": {
+            "label": "image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "nametitle": {
+          "type": "Text",
+          "config": {
+            "label": "nametitle",
+            "placeholder": ""
+          }
+        },
+        "positiontitle": {
+          "type": "Text",
+          "config": {
+            "label": "positiontitle",
+            "placeholder": ""
+          }
+        },
+        "linkedinlogo": {
+          "type": "Image",
+          "config": {
+            "label": "linkedinlogo",
+            "constraint": {},
+            "thumbnails": []
+          }
+        },
+        "profileurl": {
+          "type": "Link",
+          "config": {
+            "label": "profileurl",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

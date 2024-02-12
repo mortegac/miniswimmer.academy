@@ -1,0 +1,64 @@
+{
+  "id": "card_list",
+  "type": "SharedSlice",
+  "name": "CardList",
+  "description": "CardList",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "CardList",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3,heading2,paragraph,preformatted,heading4,heading5,heading6,strong,em"
+          }
+        },
+        "description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "description",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,strong,em,embed,rtl"
+          }
+        }
+      },
+      "items": {
+        "cardTitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "cardTitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "heading3,heading4,heading5,heading6,em,strong"
+          }
+        },
+        "cardDescription": {
+          "type": "StructuredText",
+          "config": {
+            "label": "cardDescription",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "multi": "paragraph,preformatted,heading5,heading6,strong,em,hyperlink"
+          }
+        },
+        "cardImage": {
+          "type": "Image",
+          "config": {
+            "label": "cardImage",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

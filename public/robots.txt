@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.miniswimmer.us
+
+# Sitemaps
+Sitemap: https://www.miniswimmer.us/sitemap.xml
