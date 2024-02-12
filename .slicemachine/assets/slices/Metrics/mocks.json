@@ -1,0 +1,42 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "contenttext": "engineer",
+        "subtitle": "coast"
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Gravity",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "metrics"
+  },
+  {
+    "variation": "noBackground",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "contenttext": "definition",
+        "subtitle": "check"
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading1",
+          "text": "Throw",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "metrics"
+  }
+]

@@ -1,0 +1,48 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Willing",
+          "spans": []
+        }
+      ],
+      "subtitle": [
+        {
+          "type": "heading2",
+          "text": "Doubt",
+          "spans": []
+        }
+      ],
+      "name": "white",
+      "email": "protection",
+      "message": "planning"
+    },
+    "slice_type": "contact"
+  },
+  {
+    "variation": "cotizarForm",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "subtitle": [
+        {
+          "type": "heading2",
+          "text": "Stage",
+          "spans": []
+        }
+      ],
+      "name": "depend",
+      "email": "principle"
+    },
+    "slice_type": "contact"
+  }
+]

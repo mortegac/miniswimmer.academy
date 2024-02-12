@@ -1,0 +1,95 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "logoImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea"
+        }
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Citizen",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Occaecat amet esse consectetur mollit duis nulla non excepteur tempor esse aliqua adipisicing exercitation proident. Aute ullamco aliquip mollit duis excepteur minim occaecat.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "logo_list"
+  },
+  {
+    "variation": "onlyLogosBg",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "logoImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89"
+        }
+      }
+    ],
+    "primary": {},
+    "slice_type": "logo_list"
+  },
+  {
+    "variation": "buttonTitleDescription",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "logoImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da"
+        },
+        "subtitle": [
+          {
+            "type": "paragraph",
+            "text": "Velit aute consequat sunt fugiat ut incididunt. Ullamco irure labore aliqua magna officia aliqua nostrud esse exercitation enim do.",
+            "spans": []
+          }
+        ],
+        "description": "part",
+        "buttonlink": {
+          "link_type": "Web",
+          "url": "https://prismic.io"
+        },
+        "buttontext": "coffee"
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Dolor ullamco cillum elit incididunt eu commodo est Lorem proident proident.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "logo_list"
+  }
+]

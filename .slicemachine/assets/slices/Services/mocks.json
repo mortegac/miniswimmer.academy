@@ -1,0 +1,141 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "imagelist": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2"
+        },
+        "titlelist": "green",
+        "descriptionlist": "angle"
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Night",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Occaecat ad ea dolor dolore. Exercitation labore ullamco enim in culpa ullamco. Sunt deserunt ullamco laborum nisi aute reprehenderit veniam occaecat excepteur non ex fugiat reprehenderit eiusmod.",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1591012911207-0dbac31f37da"
+      },
+      "buttontext": "account"
+    },
+    "slice_type": "services"
+  },
+  {
+    "variation": "noIconsNoButtons",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Helpful",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Ex nisi consequat aute aute qui. Mollit magna sint dolor amet ea in cillum magna et minim pariatur aliqua occaecat. Eu aliquip consectetur non consequat est veniam laborum veniam dolore duis ex nostrud qui deserunt.",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1547082299-de196ea013d6"
+      }
+    },
+    "slice_type": "services"
+  },
+  {
+    "variation": "noIcons",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Seeing",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Lorem ea aliquip sit in ipsum. Id do enim occaecat officia veniam laborum ex dolore laborum et. Incididunt officia esse laboris Lorem ex est tempor sit veniam cillum aliqua ut dolore duis.",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1571126770897-2d612d1f7b89"
+      },
+      "buttontext": "rod"
+    },
+    "slice_type": "services"
+  },
+  {
+    "variation": "imageText",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Bottom",
+          "spans": []
+        }
+      ],
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f"
+      }
+    },
+    "slice_type": "services"
+  }
+]

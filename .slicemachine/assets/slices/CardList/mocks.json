@@ -1,0 +1,50 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "cardTitle": [
+          {
+            "type": "heading3",
+            "text": "Progress",
+            "spans": []
+          }
+        ],
+        "cardDescription": [
+          {
+            "type": "paragraph",
+            "text": "Incididunt enim id excepteur consequat et enim duis non irure fugiat excepteur.",
+            "spans": []
+          }
+        ],
+        "cardImage": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb"
+        }
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Eiusmod culpa labore aliquip. Labore esse fugiat ipsum adipisicing adipisicing laboris do anim excepteur ipsum ut quis enim ea. Adipisicing minim et ad reprehenderit.",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Cillum velit amet sit dolore do officia reprehenderit eiusmod irure cillum qui sint tempor dolore velit. Laboris tempor velit id laborum aute aliqua veniam mollit est sit exercitation laboris.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "card_list"
+  }
+]

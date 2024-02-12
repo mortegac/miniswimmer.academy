@@ -1,0 +1,129 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "invertedlayout": true,
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1593642633279-1796119d5482"
+      },
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Voluptate dolor ea laboris cupidatat sit adipisicing officia Lorem aliqua ex adipisicing culpa cillum excepteur occaecat.",
+          "spans": []
+        }
+      ],
+      "buttontext": "turn",
+      "buttonlink": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      },
+      "mobileimage": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1537498425277-c283d32ef9db"
+      },
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Labore nostrud ipsum do dolore aliquip dolor dolore occaecat.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "hero"
+  },
+  {
+    "variation": "noButtonNoDescription",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "invertedlayout": true,
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853"
+      },
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Ullamco pariatur culpa elit irure est labore dolore officia excepteur elit dolor et.",
+          "spans": []
+        }
+      ],
+      "mobileimage": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1607582278038-6bebbd4d7b72"
+      }
+    },
+    "slice_type": "hero"
+  },
+  {
+    "variation": "noButton",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "invertedlayout": false,
+      "image": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1493119508027-2b584f234d6c"
+      },
+      "title": [
+        {
+          "type": "paragraph",
+          "text": "Eiusmod aute excepteur ex consequat anim in non ullamco ex sint non.",
+          "spans": []
+        }
+      ],
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Consectetur sunt amet exercitation sit ullamco quis labore culpa laborum quis minim aliquip.",
+          "spans": []
+        }
+      ],
+      "mobileimage": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1531771686035-25f47595c87a"
+      }
+    },
+    "slice_type": "hero"
+  }
+]

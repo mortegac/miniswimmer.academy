@@ -1,0 +1,36 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "imgswapp": {
+        "dimensions": {
+          "width": 900,
+          "height": 500
+        },
+        "alt": null,
+        "copyright": null,
+        "url": "https://images.unsplash.com/photo-1544731612-de7f96afe55f"
+      },
+      "subtitle": "mine",
+      "description": [
+        {
+          "type": "paragraph",
+          "text": "Id nisi exercitation non ad duis esse in. Culpa velit reprehenderit eu ut sit duis laborum sunt eiusmod non dolore sit voluptate aliquip officia.",
+          "spans": []
+        }
+      ],
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Close",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "projects"
+  }
+]

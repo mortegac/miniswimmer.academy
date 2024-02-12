@@ -1,0 +1,84 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {
+        "title": [
+          {
+            "type": "heading3",
+            "text": "Plastic",
+            "spans": []
+          }
+        ],
+        "description": "diagram",
+        "ico": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
+        },
+        "description1": "gold",
+        "ico2": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764"
+        },
+        "description2": "satellites",
+        "ico3": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e"
+        },
+        "description3": "trunk",
+        "ico4": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1515378960530-7c0da6231fb1"
+        },
+        "description4": "level",
+        "ico5": {
+          "dimensions": {
+            "width": 900,
+            "height": 500
+          },
+          "alt": null,
+          "copyright": null,
+          "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
+        },
+        "description5": "radio",
+        "buttontext": "whistle",
+        "buttonlink": {
+          "link_type": "Web",
+          "url": "http://google.com"
+        }
+      }
+    ],
+    "primary": {
+      "title": [
+        {
+          "type": "heading2",
+          "text": "Third",
+          "spans": []
+        }
+      ],
+      "description": "active"
+    },
+    "slice_type": "clients"
+  }
+]

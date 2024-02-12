@@ -1,0 +1,83 @@
+[
+  {
+    "variation": "default",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "subtittle": [
+        {
+          "type": "paragraph",
+          "text": "Adipisicing minim et laborum esse aliqua qui elit est. Cillum reprehenderit ea ex mollit officia labore laboris incididunt ex ipsum est esse. Nostrud aliquip veniam aute culpa sunt sunt mollit.",
+          "spans": []
+        }
+      ],
+      "tittle": [
+        {
+          "type": "paragraph",
+          "text": "Eu labore velit ut. Aute proident non non deserunt. Velit aliqua quis fugiat labore cillum officia excepteur irure commodo aliqua enim.",
+          "spans": []
+        }
+      ],
+      "buttontext": "lovely",
+      "buttonlink": {
+        "link_type": "Web",
+        "url": "http://google.com"
+      },
+      "bgcolorInitial": "#3581f7",
+      "bgcolorend": "#757aaa"
+    },
+    "slice_type": "ideas"
+  },
+  {
+    "variation": "noButtonNobg",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "subtittle": [
+        {
+          "type": "paragraph",
+          "text": "Excepteur duis labore consectetur nisi esse id deserunt dolore ullamco exercitation nulla dolore proident fugiat.",
+          "spans": []
+        }
+      ],
+      "tittle": [
+        {
+          "type": "paragraph",
+          "text": "Laboris ad velit esse irure in sunt consequat ut. Aliquip aliqua cupidatat duis labore et aliqua. Ipsum esse fugiat eu officia nulla amet amet dolore enim deserunt nisi esse.",
+          "spans": []
+        }
+      ]
+    },
+    "slice_type": "ideas"
+  },
+  {
+    "variation": "noButton",
+    "version": "sktwi1xtmkfgx8626",
+    "items": [
+      {}
+    ],
+    "primary": {
+      "subtittle": [
+        {
+          "type": "paragraph",
+          "text": "Amet ut ex proident quis enim fugiat dolore incididunt tempor nulla. Incididunt consequat ut esse excepteur ullamco quis aliquip cupidatat laborum velit elit.",
+          "spans": []
+        }
+      ],
+      "tittle": [
+        {
+          "type": "paragraph",
+          "text": "Et eu irure sunt amet irure elit ipsum. Cupidatat proident culpa non reprehenderit tempor. Dolor proident velit occaecat est mollit non dolor ea occaecat irure magna officia elit amet.",
+          "spans": []
+        }
+      ],
+      "bgcolorInitial": "#5d31a5",
+      "bgcolorend": "#4dedd6"
+    },
+    "slice_type": "ideas"
+  }
+]
