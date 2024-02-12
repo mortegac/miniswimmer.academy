@@ -53,7 +53,7 @@ export const getMetaTags = ({ description, author, title }) => [
     },
     {
         name: `og:image`,
-        content: "https://images.prismic.io/greta/ac375b05-4a63-492c-87ad-b65f2bb080f4_SOCIAL-MEDIA.png",
+        content: "https://images.prismic.io/miniswimmer-academy/3c4a5175-5a14-432c-8fb0-7b9916454a7d_SOCIAL-MEDIA.png",
     },
     {
         name: `og:image:alt`,
@@ -78,7 +78,7 @@ export const getMetaTags = ({ description, author, title }) => [
     /** TODO: Crear keywords de la academia*/
     {
         name: `keywords`,
-        content: "",
+        content: "academy, Become a Miniswimmer Instructor, swimming instructor",
     },
 ].map((items, i) => (
     <meta key={`meta-${i}`} {...items}></meta>
