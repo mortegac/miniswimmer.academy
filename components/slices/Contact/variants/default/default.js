@@ -7,10 +7,9 @@ import { SliceFactory } from "../../../../common/Containers";
 import { PageContainer, ButtonContainer, SectionContainer, FormContainer } from "../default/defaultStyles";
 import { RichText } from "prismic-reactjs";
 
-const SERVICE = "service_56ebg58";
-const TEMPLATE = "template_6p752sc";
-init("lUerPXXiKXnrvLlVw");
-// init("PIMyrgWnw02fMs0zj");
+const SERVICE = "service_1ufc0ju";
+const TEMPLATE = "template_vk47fc7";
+init("PIMyrgWnw02fMs0zj");
 
 const Base = slice => {
   const { title, subtitle, email, message, name } = slice.primary;
@@ -31,11 +30,12 @@ const Base = slice => {
   } = useForm();
 
   const onSubmit = (data) => {
+
     setIsSentEmail({
       sentEmail: true,
       isFailure: false,
-      title: "Espera por un momento ⌛",
-      text: "Estamos enviando su solicitud.",
+      title: "Please wait a moment ⌛",
+      text: "We are sending your request.",
     });
 
     const templateParams = {
@@ -46,14 +46,18 @@ const Base = slice => {
       reply_to: data.email,
     };
 
-    emailjs.send(SERVICE, TEMPLATE, { ...templateParams }).then(
-      // emailjs.send("service_1ufc0ju", "template_vk47fc7", templateParams).then(
+
+
+
+
+    // emailjs.send(SERVICE, TEMPLATE, { ...templateParams }).then(
+    emailjs.send("service_1ufc0ju", "template_vk47fc7", templateParams).then(
       function (response) {
         setIsSentEmail({
           sentEmail: true,
           isFailure: false,
-          title: "Gracias 🎉",
-          text: "Nos pondremos en contacto lo antes posible.",
+          title: "Thank you 🎉",
+          text: "We'll be in touch as soon as possible.",
           response: response || "",
         });
       },
@@ -62,7 +66,7 @@ const Base = slice => {
           sentEmail: true,
           isFailure: true,
           title: "Page not found 😭",
-          text: "Parece que no podemos encontrar la página que estás buscando.",
+          text: "It looks like we can't find the page you're looking for.",
           response: response || '',
         });
         console.log("FAILED...", error);
@@ -71,7 +75,7 @@ const Base = slice => {
       sentEmail: true,
       isFailure: true,
       title: "Page not found 😭",
-      text: "Parece que no podemos encontrar la página que estás buscando.",
+      text: "It looks like we can't find the page you're looking for.",
       response: response || '',
     })
     );
@@ -120,14 +124,14 @@ const Base = slice => {
           <FormContainer noValidate onSubmit={handleSubmit(onSubmit)}>
 
             <h2>{title[0].text || "Contactanos"}</h2>
-            <p>
-              {subtitle[0].text ||
-                "Cuéntenos sobre usted y lo conectaremos con nuestros expertos para responder cualquier pregunta que tenga."}
-            </p>
+            {/* <p>
+              {subtitle && subtitle[0].text ||
+                ""}
+            </p> */}
 
             {/* --------  NAME --------- */}
             <label htmlFor="firstname">
-              {name[0].text || "Nombre"}
+              {name[0].text || "Name"}
             </label>
             <input
               {...register("firstname", {
@@ -140,7 +144,7 @@ const Base = slice => {
               className={errors.firstname && "error"}
             />
             <span className="error">
-              {errors.firstname && "Por favor ingrese su nombre"}
+              {errors.firstname && "Please enter your name"}
             </span>
 
             {/* --------  EMAIl --------- */}
@@ -164,13 +168,13 @@ const Base = slice => {
               className={errors.email && "error"}
             />
             <span className="error">
-              {errors.email && "Por favor ingrese su email"}
+              {errors.email && "Please enter your email"}
             </span>
 
 
             {/* --------  MESSAGE --------- */}
             <label htmlFor="message">
-              {message[0].text || "En que podemos ayudarlo?"}
+              {message[0].text || "How can we help?"}
             </label>
             <textarea
               {...register("message", {
@@ -185,13 +189,13 @@ const Base = slice => {
               className={errors.message && "error"}
             />
             <span className="error">
-              {errors.message && "Por favor ingrese su inquietud"}
+              {errors.message && "Please enter your concern"}
             </span>
 
             <input
               type="submit"
               name="Contact Us"
-              value="Enviar"
+              value="Send email"
             // value={contactCtaText[0].text || "Contact us"}
             />
 
@@ -206,7 +210,7 @@ const Base = slice => {
 export const Default = SliceFactory(Base, {
   sectionContainerProps: {
     style: {
-      backgroundColor: "#F4F4F4",
+      backgroundColor: "#FFFFFF",
     }
   }
 });
