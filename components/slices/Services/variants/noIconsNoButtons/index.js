@@ -1,13 +1,16 @@
+import Link from "next/link";
+
 import { SliceFactory } from "../../../../common/Containers";
 import {
   Description,
   Content,
   ImgHolder,
+  ButtonContainer,
 } from "../default/defaultStyles";
 import { RichText } from "prismic-reactjs";
 
 const Base = (props) => {
-  const { description, image, title } = props.primary;
+  const { description, image, title, buttontext, buttonlink } = props.primary;
 
   return (
     <Content>
@@ -18,6 +21,7 @@ const Base = (props) => {
         </picture>
       </ImgHolder>
       <Description>
+      {/* <pre>{JSON.stringify(props.primary, null, 2 )}</pre> */}
         {title[0]?.text ? (
           RichText.render(title)
         ) : (
@@ -33,8 +37,23 @@ const Base = (props) => {
             odio, et dignissimos..
           </p>
         )}
-      </Description>
-    </Content>
+ 
+        {
+          buttontext && 
+            <Link
+              key={`coach-level-1`}
+              href={buttonlink.uid}
+              passHref
+              prefetch
+            >
+              <ButtonContainer fullwidth={false}>
+                {buttontext && buttontext}
+              </ButtonContainer>
+            </Link>
+          }
+    
+    </Description>
+      </Content>
   );
 };
 

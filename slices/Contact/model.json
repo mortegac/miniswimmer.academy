@@ -87,6 +87,98 @@
       },
       "items": {},
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    },
+    {
+      "id": "enroll",
+      "name": "enroll",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "Contact",
+      "primary": {
+        "title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "title",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "subtitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "subtitle",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "name": {
+          "type": "Text",
+          "config": {
+            "label": "name",
+            "placeholder": ""
+          }
+        },
+        "birthday": {
+          "type": "Text",
+          "config": {
+            "label": "birthday",
+            "placeholder": ""
+          }
+        },
+        "address": {
+          "type": "Text",
+          "config": {
+            "label": "address",
+            "placeholder": ""
+          }
+        },
+        "phone": {
+          "type": "Text",
+          "config": {
+            "label": "phone",
+            "placeholder": ""
+          }
+        },
+        "email": {
+          "type": "Text",
+          "config": {
+            "label": "email",
+            "placeholder": ""
+          }
+        },
+        "profession": {
+          "type": "Text",
+          "config": {
+            "label": "profession",
+            "placeholder": ""
+          }
+        },
+        "studyinthearea": {
+          "type": "Text",
+          "config": {
+            "label": "studyinthearea",
+            "placeholder": ""
+          }
+        },
+        "medicalhistory": {
+          "type": "Text",
+          "config": {
+            "label": "medicalhistory",
+            "placeholder": ""
+          }
+        },
+        "emergencycontact": {
+          "type": "Text",
+          "config": {
+            "label": "emergencycontact",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]
 }

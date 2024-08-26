@@ -103,6 +103,21 @@
             "constraint": {},
             "thumbnails": []
           }
+        },
+        "buttontext": {
+          "type": "Text",
+          "config": {
+            "label": "buttontext",
+            "placeholder": ""
+          }
+        },
+        "buttonlink": {
+          "type": "Link",
+          "config": {
+            "label": "buttonlink",
+            "placeholder": "",
+            "select": null
+          }
         }
       },
       "items": {},

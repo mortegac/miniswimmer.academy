@@ -54,6 +54,18 @@ export const Theme = {
         lineHeight: "24px",
       },
     },
+    h6: {
+      desktop: {
+        fontSize: "26px",
+        fontWeight: "500",
+        lineHeight: "32px",
+      },
+      mobile: {
+        fontSize: "16px",
+        fontWeight: "500",
+        lineHeight: "24px",
+      },
+    },
     customSpan: {
       desktop: {
         fontSize: "64px",
@@ -92,9 +104,9 @@ export const Theme = {
     },
     p: {
       desktop: {
-        fontSize: "16px",
+        fontSize: "18px",
         fontWeight: "400",
-        lineHeight: "24px",
+        lineHeight: "26px",
       },
       mobile: {
         fontSize: "16px",
@@ -120,7 +132,7 @@ export const Theme = {
     // #1C2146
     secondary: "#AF5FAC", // "#5FDC00",
     bgHover: "#363636",
-    bgColorPrimary: "#078FF1",
+    bgColorPrimary: "#AF5FAC",
     bgColorSecondary: "#FBE3D5",
     bgColorTertiary: "#FCF4F0",
     bgColorLight: "FAF2ED",
@@ -146,8 +158,8 @@ export const Theme = {
     borderRadius: "22px",
     height: "46px",
     padding: "10px 30px",
-    bgPrimary: "#3FBB49",
-    bgPrimaryOver: "#49DE55",
+    bgPrimary: "#AF5FAC",
+    bgPrimaryOver: "#8c4c89",
   },
   breakpoints: {
     xs: "450px",

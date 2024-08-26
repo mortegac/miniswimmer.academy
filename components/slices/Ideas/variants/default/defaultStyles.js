@@ -17,30 +17,57 @@ export const Description = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 32px;
+  // padding: 32px;
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     width: 100%;
     margin-right: 0;
+    padding-top: 32px;
+    
   }
   
+  
+  .EnrollBox{
+  
+    padding-top:8px;
+    margin-left:32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+  .dateBox{
+    padding-top:8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+    
+  h6 {
+    margin: 0;
+    margin-bottom: 14px;
+    
+    font-weight:  ${(props) => props.theme.typography.h6.desktop.fontWeight};
+    line-height:  ${(props) => props.theme.typography.h6.desktop.lineHeight};
+    font-size: ${(props) => props.theme.typography.h6.desktop.fontSize};
+    color: #ffffff;
+  }
   h2 {
     text-align: center;
     margin: 0;
-    margin-bottom: 24px;
+    // margin-bottom: 24px;
     font-weight:  ${(props) => props.theme.typography.h2.desktop.fontWeight};
     line-height:  ${(props) => props.theme.typography.h2.desktop.lineHeight};
     font-size: ${(props) => props.theme.typography.h2.desktop.fontSize};
-    color: #2b2b2b;
+    color: #ffffff;
     // color: ${(props) => props.theme.colors.textDarkblue};
     @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-      // width: 100%;
       font-weight:  ${(props) => props.theme.typography.h2.desktop.fontWeight};
       line-height:  ${(props) => props.theme.typography.h2.desktop.lineHeight};
       font-size: ${(props) => props.theme.typography.h2.desktop.fontSize};
-      margin-bottom: 16px;
+      
     }
     @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
-      margin-top 16px;
       width: 100%;
       text-align: center;
       line-height:  ${(props) => props.theme.typography.h2.mobile.lineHeight};
@@ -63,7 +90,7 @@ export const Description = styled.div`
     line-height:  ${(props) => props.theme.typography.h3.desktop.lineHeight};
     font-size: ${(props) => props.theme.typography.h3.desktop.fontSize};
     text-align: center;
-    color:#2b2b2b; 
+    color:#ffffff; 
     // ${(props) => props.theme.colors.primary};
     margin-bottom: 8px;
     @media (max-width: ${(props) => props.theme.breakpoints.md}) {
@@ -137,6 +164,7 @@ border: none;
 cursor: pointer;
 transition: background 0.3s ease;
 width: fit-content;
+
 height: ${(props) => props.theme.button.height};
 background:#fff;
 // background:${(props) => props.theme.button.bgPrimary};
@@ -150,6 +178,7 @@ color:#67614B;
   color: ${(props) => props.theme.colors.white};
 }
 padding:${(props) => props.theme.button.padding};
+
 
 
 @media (max-width: ${(props) => props.theme.breakpoints.md}) {

@@ -11,8 +11,8 @@ const Base = slice => {
       <Description>
         {subtittle[0]?.text && RichText.render(subtittle)}
         {tittle[0]?.text && RichText.render(tittle)}
-        {buttonlink.uid &&
-          <Link href={buttonlink.uid}>
+        {buttonlink?.uid &&
+          <Link href={buttonlink?.uid}>
             <Button>
               {buttontext && buttontext}
             </Button>

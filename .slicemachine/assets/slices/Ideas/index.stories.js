@@ -1,0 +1,15 @@
+import MyComponent from '../../../../slices/Ideas';
+
+export default {
+  title: 'slices/Ideas'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"subtittle":[{"type":"paragraph","text":"Ipsum consequat in ex ex reprehenderit enim Lorem mollit ullamco officia pariatur veniam. Ea ipsum id cupidatat laboris velit.","spans":[]}],"tittle":[{"type":"paragraph","text":"Officia sunt voluptate excepteur et tempor.","spans":[]}],"buttontext":"social","buttonlink":{"link_type":"Web","url":"https://prismic.io"},"bgcolorInitial":"#e746ab","bgcolorend":"#6035e1"},"slice_type":"ideas","id":"_Default"}} />
+_Default.storyName = ''
+
+export const _NoButtonNobg = () => <MyComponent slice={{"variation":"noButtonNobg","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"subtittle":[{"type":"paragraph","text":"Reprehenderit ut ullamco exercitation qui ea fugiat ex. Do consectetur Lorem eu mollit minim non magna qui sit enim nulla commodo.","spans":[]}],"tittle":[{"type":"paragraph","text":"Incididunt do commodo amet minim. Consequat ea fugiat sunt eu ad voluptate laborum do veniam labore Lorem ipsum et ad nostrud. Aliquip consectetur irure aliquip labore excepteur.","spans":[]}]},"slice_type":"ideas","id":"_NoButtonNobg"}} />
+_NoButtonNobg.storyName = ''
+
+export const _NoButton = () => <MyComponent slice={{"variation":"noButton","version":"sktwi1xtmkfgx8626","items":[{}],"primary":{"subtittle":[{"type":"paragraph","text":"Sint reprehenderit ad minim sunt tempor sint laboris.","spans":[]}],"tittle":[{"type":"paragraph","text":"Ullamco ut consectetur exercitation magna pariatur et quis adipisicing do do culpa voluptate laborum pariatur anim. Enim laboris pariatur consequat voluptate pariatur veniam proident nostrud sit pariatur dolore sunt commodo veniam. Sint est id Lorem sunt ipsum nulla duis.","spans":[]}],"textbutton":"potatoes","linkbutton":{"link_type":"Web","url":"https://slicemachine.dev"}},"slice_type":"ideas","id":"_NoButton"}} />
+_NoButton.storyName = ''

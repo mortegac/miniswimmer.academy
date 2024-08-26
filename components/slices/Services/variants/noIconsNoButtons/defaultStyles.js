@@ -13,6 +13,38 @@ export const Content = styled.div`
   }
 `;
 
+export const ButtonContainer = styled.button`
+  margin-top: 36px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-family: ${(props) => props.theme.typography.fontFamily};
+  white-space: nowrap;
+  border-radius: ${(props) => props.theme.button.borderRadius};
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: fit-content;
+  height: ${(props) => props.theme.button.height};
+  background:${(props) => props.theme.colors.textLightPrimary};
+  border: 1px solid ${(props) => props.theme.colors.textLightPrimary};
+  color:${(props) => props.theme.colors.white};
+  :hover {
+    background-color: ${(props) => props.theme.colors.bgHover};
+    color: ${(props) => props.theme.colors.white};
+  }
+  padding:${(props) => props.theme.button.padding};
+  
+
+  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+    width: 100%;
+  }
+`;
+
 export const Description = styled.div`
   display: flex;
   flex-direction: column;

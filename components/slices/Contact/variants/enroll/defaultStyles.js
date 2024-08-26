@@ -44,7 +44,7 @@ export const SectionContainer = styled.div`
 `;
 
 export const FormContainer = styled.form`
-  max-width: 640px;
+  max-width: 440px;
   width: 100%;
   background: white;
   border: 1px solid rgba(0, 17, 51, 0.15);
@@ -56,28 +56,6 @@ export const FormContainer = styled.form`
   align-items: flex-start;
   position: relative;
 
-  .dateText{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: center;
-    span{
-      width: 100%;
-      margin-left: 22px;
-      margin-top: 14px;
-      letter-spacing: 0px;
-      margin-bottom: 5px;
-      
-      font-size: ${(props) => props.theme.typography.p.desktop.fontSize};
-      line-height: ${(props) => props.theme.typography.p.desktop.lineHeight};
-      font-weight: ${(props) => props.theme.typography.p.desktop.lineHeight};
-      color: ${(props) => props.theme.colors.textSecondary};
-      font-family: ${(props) => props.theme.typography.fontFamily};
- 
-    
-    
-    }
-  }
   .country-dropdown {
     position: relative;
     width: 100%;
@@ -127,14 +105,13 @@ export const FormContainer = styled.form`
     border: none;
   }
   h2 {
-    font-size: 22px;
+    font-size: 20px;
     line-height: 28px;
     font-weight: 500;
     color: rgba(0, 17, 51, 0.8);
-    text-align: left;
+    text-align: center;
     margin: 0;
     letter-spacing: 0px;
-    margin-bottom: 12px;
   }
   p {
     font-size: ${(props) => props.theme.typography.p.desktop.fontSize};
@@ -143,7 +120,7 @@ export const FormContainer = styled.form`
     color: ${(props) => props.theme.colors.textSecondary};
     font-family: ${(props) => props.theme.typography.fontFamily};
     margin-top: 14px;
-    margin-bottom: 32px;
+    margin-bottom: 23px;
     letter-spacing: 0px;
   }
 
@@ -227,8 +204,8 @@ export const FormContainer = styled.form`
     transition: background 0.3s ease;
     height: 48px;
     width: 100%;
-    background:${(props) => props.theme.button.bgPrimary};
-    border: 1px solid ${(props) => props.theme.button.bgPrimary};
+    background:${(props) => props.theme.button.bgColorPrimary};
+    border: 1px solid ${(props) => props.theme.button.bgColorPrimary};
     color:${(props) => props.theme.colors.white};
     :hover {
       background-color: ${(props) => props.theme.button.bgPrimaryOver};

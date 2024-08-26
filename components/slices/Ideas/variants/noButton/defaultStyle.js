@@ -13,6 +13,42 @@ export const Content = styled.div`
   }
 `;
 
+export const Button = styled.button`
+margin-top: 36px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+font-weight: bold;
+font-family: ${(props) => props.theme.typography.fontFamily};
+white-space: nowrap;
+border-radius: ${(props) => props.theme.button.borderRadius};
+font-size: 16px;
+line-height: 24px;
+border: none;
+cursor: pointer;
+transition: background 0.3s ease;
+width: fit-content;
+height: ${(props) => props.theme.button.height};
+background:#fff;
+// background:${(props) => props.theme.button.bgPrimary};
+border: 1px solid #67614B;
+// border: 1px solid ${(props) => props.theme.button.bgPrimary};
+color:#67614B;
+// color:${(props) => props.theme.colors.white};
+:hover {
+  // background-color: ${(props) => props.theme.button.bgPrimaryOver};
+  background-color: #2b2b2b;
+  color: ${(props) => props.theme.colors.white};
+}
+padding:${(props) => props.theme.button.padding};
+
+
+@media (max-width: ${(props) => props.theme.breakpoints.md}) {
+  width: 100%;
+}
+`;
+
 export const Description = styled.div`
   display: flex;
   flex-direction: column;

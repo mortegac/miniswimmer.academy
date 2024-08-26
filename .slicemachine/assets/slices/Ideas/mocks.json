@@ -9,24 +9,24 @@
       "subtittle": [
         {
           "type": "paragraph",
-          "text": "Adipisicing minim et laborum esse aliqua qui elit est. Cillum reprehenderit ea ex mollit officia labore laboris incididunt ex ipsum est esse. Nostrud aliquip veniam aute culpa sunt sunt mollit.",
+          "text": "Ipsum consequat in ex ex reprehenderit enim Lorem mollit ullamco officia pariatur veniam. Ea ipsum id cupidatat laboris velit.",
           "spans": []
         }
       ],
       "tittle": [
         {
           "type": "paragraph",
-          "text": "Eu labore velit ut. Aute proident non non deserunt. Velit aliqua quis fugiat labore cillum officia excepteur irure commodo aliqua enim.",
+          "text": "Officia sunt voluptate excepteur et tempor.",
           "spans": []
         }
       ],
-      "buttontext": "lovely",
+      "buttontext": "social",
       "buttonlink": {
         "link_type": "Web",
-        "url": "http://google.com"
+        "url": "https://prismic.io"
       },
-      "bgcolorInitial": "#3581f7",
-      "bgcolorend": "#757aaa"
+      "bgcolorInitial": "#e746ab",
+      "bgcolorend": "#6035e1"
     },
     "slice_type": "ideas"
   },
@@ -40,14 +40,14 @@
       "subtittle": [
         {
           "type": "paragraph",
-          "text": "Excepteur duis labore consectetur nisi esse id deserunt dolore ullamco exercitation nulla dolore proident fugiat.",
+          "text": "Reprehenderit ut ullamco exercitation qui ea fugiat ex. Do consectetur Lorem eu mollit minim non magna qui sit enim nulla commodo.",
           "spans": []
         }
       ],
       "tittle": [
         {
           "type": "paragraph",
-          "text": "Laboris ad velit esse irure in sunt consequat ut. Aliquip aliqua cupidatat duis labore et aliqua. Ipsum esse fugiat eu officia nulla amet amet dolore enim deserunt nisi esse.",
+          "text": "Incididunt do commodo amet minim. Consequat ea fugiat sunt eu ad voluptate laborum do veniam labore Lorem ipsum et ad nostrud. Aliquip consectetur irure aliquip labore excepteur.",
           "spans": []
         }
       ]
@@ -64,19 +64,22 @@
       "subtittle": [
         {
           "type": "paragraph",
-          "text": "Amet ut ex proident quis enim fugiat dolore incididunt tempor nulla. Incididunt consequat ut esse excepteur ullamco quis aliquip cupidatat laborum velit elit.",
+          "text": "Sint reprehenderit ad minim sunt tempor sint laboris.",
           "spans": []
         }
       ],
       "tittle": [
         {
           "type": "paragraph",
-          "text": "Et eu irure sunt amet irure elit ipsum. Cupidatat proident culpa non reprehenderit tempor. Dolor proident velit occaecat est mollit non dolor ea occaecat irure magna officia elit amet.",
+          "text": "Ullamco ut consectetur exercitation magna pariatur et quis adipisicing do do culpa voluptate laborum pariatur anim. Enim laboris pariatur consequat voluptate pariatur veniam proident nostrud sit pariatur dolore sunt commodo veniam. Sint est id Lorem sunt ipsum nulla duis.",
           "spans": []
         }
       ],
-      "bgcolorInitial": "#5d31a5",
-      "bgcolorend": "#4dedd6"
+      "textbutton": "potatoes",
+      "linkbutton": {
+        "link_type": "Web",
+        "url": "https://slicemachine.dev"
+      }
     },
     "slice_type": "ideas"
   }

@@ -42,7 +42,7 @@ export const ButtonContainer = styled.button`
   transition: background 0.3s ease;
   width: fit-content;
   height: ${(props) => props.theme.button.height};
-  background:${(props) => props.theme.colors.textLightPrimary};
+  background: #AF5FAC;
   border: 1px solid ${(props) => props.theme.colors.textLightPrimary};
   color:${(props) => props.theme.colors.white};
   :hover {
