@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:ror="http://rorweb.com/0.1/" >
+<channel>
+  <title>ROR Sitemap for https://miniswimmer.academy/</title>
+  <link>https://miniswimmer.academy/</link>
+
+<item>
+     <link>https://miniswimmer.academy/</link>
+     <title>miniswimmer.academy</title>
+     <description>Learn revolutionary swimming techniques to safely teach babies and children at our prestigious swimming coach academy. Our methodology based on infant swimming uses neurolinguistic programming and coaching to create joyful experiences in the water. Expert coaches train you in gentle, play-based approaches tailored to different ages and stages. Graduate with certifications to start a rewarding career teaching little ones life-saving water skills. Join our distinguished community of swimming instr</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>0</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://miniswimmer.academy/certificaciones</link>
+     <title>miniswimmer.academy</title>
+     <description>Explora las certificaciones profesionales de MiniSwimmer para instructores de natación infantil. Programas especializados que elevarán tu carrera en enseñanza acuática para niños. Descubre nuestros niveles y especialidades.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+<item>
+     <link>https://miniswimmer.academy/certificacion-miniswimmercoach-level-1</link>
+     <title>miniswimmer.academy</title>
+     <description>Certificación avanzada para profesionales acuáticos: instructores, entrenadores y fisioterapeutas. Experiencia única más allá de cursos tradicionales. Aprende métodos efectivos para lograr objetivos en mini clientes acuáticos.</description>
+     <ror:updatePeriod></ror:updatePeriod>
+     <ror:sortOrder>1</ror:sortOrder>
+     <ror:resourceOf>sitemap</ror:resourceOf>
+</item>
+</channel>
+</rss>
+  
