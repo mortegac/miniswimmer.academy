@@ -16,6 +16,7 @@ const LinkPage = (data, pagename) => {
             <Link
                 key={`top-nav-${data.id}`}
                 href={data.url === "" ? `/${linkResolver(dataMenu)}` : data.uid}
+                // href={data.url === "" ? `/${linkResolver(dataMenu)}` : data.uid}
                 passHref
                 prefetch
             >
@@ -71,6 +72,7 @@ export const renderedMenuLinks = (menuLinks, pageName) => Array.isArray(menuLink
         if (validNavbarLink(menuLink)) {
             return (
                 <>
+                
                     <LinkPage
                         pageName={pageName}
                         key={index + "_menu_links"}
