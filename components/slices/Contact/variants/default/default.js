@@ -16,8 +16,8 @@ const Base = slice => {
   const [isSentEmail, setIsSentEmail] = useState({
     sentEmail: false,
     isFailure: false,
-    title: "Page not found 😭",
-    text: "We can't seem to find the page you're looking for ",
+    title: "Página no encontrada 😭",
+    text: "No encontramos la página solicitada ",
   });
   const [emailValue, setEmailValue] = useState("");
 
@@ -34,8 +34,8 @@ const Base = slice => {
     setIsSentEmail({
       sentEmail: true,
       isFailure: false,
-      title: "Please wait a moment ⌛",
-      text: "We are sending your request.",
+      title: "Espere un momento ⌛",
+      text: "Estamos procesando su inscripción",
     });
 
     const templateParams = {
@@ -56,8 +56,8 @@ const Base = slice => {
         setIsSentEmail({
           sentEmail: true,
           isFailure: false,
-          title: "Thank you 🎉",
-          text: "We'll be in touch as soon as possible.",
+          title: "Registro ingresado 🎉",
+          text: "Te enviamos un email, responde y adjunta tu comprobante de pago para finalizar el proceso",
           response: response || "",
         });
       },
@@ -65,8 +65,8 @@ const Base = slice => {
         setIsSentEmail({
           sentEmail: true,
           isFailure: true,
-          title: "Page not found 😭",
-          text: "It looks like we can't find the page you're looking for.",
+          title: "Página no encontrada 😭",
+          text: "No encontramos la página solicitada ",
           response: response || '',
         });
         console.log("FAILED...", error);
@@ -74,8 +74,8 @@ const Base = slice => {
     ).catch(err => setIsSentEmail({
       sentEmail: true,
       isFailure: true,
-      title: "Page not found 😭",
-      text: "It looks like we can't find the page you're looking for.",
+      title: "Página no encontrada 😭",
+      text: "No encontramos la página solicitada ",
       response: response || '',
     })
     );
@@ -99,6 +99,7 @@ const Base = slice => {
     <PageContainer bgColor={"white"}>
       {isSentEmail.sentEmail ? (
         <>
+        <pre>slice.primary = {JSON.stringify(slice.primary, null, 2 )}</pre>
           <SectionContainer>
             <h2>{isSentEmail.title}</h2>
             <p> {isSentEmail.text}</p>
@@ -109,7 +110,7 @@ const Base = slice => {
               prefetch
             >
               <ButtonContainer fullwidth={true}>
-                {"Take me home"}
+                {"Ir al home"}
               </ButtonContainer>
             </Link>
           </SectionContainer>
@@ -131,7 +132,7 @@ const Base = slice => {
 
             {/* --------  NAME --------- */}
             <label htmlFor="firstname">
-              {name[0].text || "Name"}
+              {name[0].text || "Nombre"}
             </label>
             <input
               {...register("firstname", {
@@ -144,7 +145,7 @@ const Base = slice => {
               className={errors.firstname && "error"}
             />
             <span className="error">
-              {errors.firstname && "Please enter your name"}
+              {errors.firstname && "Campo obligatorio"}
             </span>
 
             {/* --------  EMAIl --------- */}
@@ -168,13 +169,13 @@ const Base = slice => {
               className={errors.email && "error"}
             />
             <span className="error">
-              {errors.email && "Please enter your email"}
+              {errors.email && "Campo obligatorio"}
             </span>
 
 
             {/* --------  MESSAGE --------- */}
             <label htmlFor="message">
-              {message[0].text || "How can we help?"}
+              {message[0].text || ""}
             </label>
             <textarea
               {...register("message", {
@@ -189,7 +190,7 @@ const Base = slice => {
               className={errors.message && "error"}
             />
             <span className="error">
-              {errors.message && "Please enter your concern"}
+              {errors.message && "Campo obligatorio"}
             </span>
 
             <input
