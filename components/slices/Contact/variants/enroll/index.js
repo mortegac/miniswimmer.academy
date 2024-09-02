@@ -1,18 +1,17 @@
 import React, { useState, useEffect, useRef, useReducer } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, Controller } from "react-hook-form";
 import Link from "next/link";
 import emailjs, { init } from "emailjs-com";
-import { TuiDatePicker } from 'nextjs-tui-date-picker';
-
-
-const options = {
-  language: 'es',
-  format: 'dd-MM-YYYY',
-};
-
+import 'react-date-picker/dist/DatePicker.css';
+import 'react-calendar/dist/Calendar.css';
+// import {DatePicker} from "@nextui-org/date-picker";
+// import {DatePicker} from "@nextui-org/react";
+// import {parseDate, getLocalTimeZone} from "@internationalized/date";
+// import {useDateFormatter} from "@react-aria/i18n";
+import DatePicker from 'react-date-picker';
 
 import { SliceFactory } from "../../../../common/Containers";
-import { PageContainer, ButtonContainer, SectionContainer, FormContainer } from "../default/defaultStyles";
+import { SampleContainer, PageContainer, ButtonContainer, SectionContainer, FormContainer } from "../default/defaultStyles";
 
 import { createEnroll } from "../../../../../services/enroll.services"
 
@@ -67,7 +66,72 @@ const SERVICE = "service_1ufc0ju";  // welcome@mini..
 const TEMPLATE = "template_az151im";
 init("PIMyrgWnw02fMs0zj");
 
+function transformDate(isoDate) {
+  const date = new Date(isoDate);
+  
+  const day = date.getUTCDate().toString().padStart(2, '0');
+  const month = (date.getUTCMonth() + 1).toString().padStart(2, '0'); // Los meses en JavaScript van de 0 a 11
+  const year = date.getUTCFullYear();
+
+  return `${day}/${month}/${year}`;
+}
+
+// function convertirFecha(fechaString) {
+//   // Asumimos que la fecha viene en formato "dd/mm/yyyy"
+//   console.log("---fechaString--", fechaString)
+  
+//   const [day, month, year] = fechaString.split('/');
+  
+//   // Creamos una nueva fecha en formato "yyyy-mm-dd"
+//   return new Date(`${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`);
+// }
+
+function calcularEdad(fechaNacimiento) {
+  // Parseamos la fecha de nacimiento
+  const nacimiento = new Date(fechaNacimiento);
+  
+  // Obtenemos la fecha actual
+  const hoy = new Date();
+  // window && window.console.log("hoy=", hoy, " nacimiento=", nacimiento);
+  // window && window.console.log("---edad---", edad, " hoy=", hoy.getFullYear(), " nacimiento=", nacimiento.getFullYear());
+  
+  // Calculamos la diferencia en años
+  let edad = hoy.getFullYear() - nacimiento.getFullYear();
+  
+  // window && window.console.log("---edad---", edad, " hoy=", hoy.getFullYear(), " nacimiento=", nacimiento.getFullYear());
+    
+  
+  // Ajustamos la edad si aún no ha llegado el cumpleaños este año
+  const mes = hoy.getMonth() - nacimiento.getMonth();
+  if (mes < 0 || (mes === 0 && hoy.getDate() < nacimiento.getDate())) {
+    edad--;
+  }
+  
+  return edad;
+}
+
+// function calcularEdad(fechaNacimientoString) {
+//   const fechaNacimiento = convertirFecha(fechaNacimientoString);
+  
+//   console.log("---fechaNacimiento--", fechaNacimiento)
+  
+//   const hoy = new Date();
+//   let años = hoy.getFullYear() - fechaNacimiento.getFullYear();
+//   let meses = hoy.getMonth() - fechaNacimiento.getMonth();
+
+//   if (meses < 0 || (meses === 0 && hoy.getDate() < fechaNacimiento.getDate())) {
+//     años--;
+//     meses += 12;
+//   }
+
+//   meses = meses % 12;
+
+//   return { años, meses };
+// }
+
 const Base = slice => {
+  const [date, setDate] = React.useState(new Date("01-01-1980 00:00:00"));
+  const [years, setYears] = React.useState("");
   const { title, subtitle, email, birthday, name, address, phone, profession, studyinthearea, medicalhistory, emergencycontact } = slice.primary;
   const [isSentEmail, setIsSentEmail] = useState({
     sentEmail: false,
@@ -79,16 +143,39 @@ const Base = slice => {
 
   const {
     register,
+    control,
     handleSubmit,
     clearErrors,
     setValue,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = async (data) => {
-
-    await handlerAddNewEnroll(data);
+  
+  // function edad(dateChild) { return calcularEdad(dateChild)}
+  
+  const handleChange = (dateChange) => {
+    window && window.console.log("---dateChange---", dateChange);
     
+    const date = new Date(dateChange).toISOString();
+    const newDate = transformDate(date);
+    const getBirthday= calcularEdad(dateChange);
+    
+    window && window.console.log("---getBirthday---", getBirthday);
+    window && window.console.log("---newDate---", newDate);
+    
+    // const getBirthday:any = tiempoTranscurrido(e.target.value)
+    // setBirthday({month:getBirthday.meses , years:getBirthday.años});
+
+        
+    setValue("birthday", dateChange, {
+      shouldDirty: true
+    });
+    setDate(dateChange);
+    setYears(getBirthday)
+  };
+  
+  const onSubmit = async (data) => {
+    await handlerAddNewEnroll(data);
     setIsSentEmail({
       sentEmail: true,
       isFailure: false,
@@ -102,7 +189,7 @@ const Base = slice => {
       reply_to: data.email,
       to_name: data.name,
       to_email: data.email,
-      to_birthday: data.birthday,
+      to_birthday: date,
       // to_years: data.,
       to_address: data.address,
       to_phone: data.phone,
@@ -153,8 +240,8 @@ const Base = slice => {
   const handlerAddNewEnroll = async (data) => await createEnroll({
       name: data.name,
       email: data.email,
-      birthdate: "1979-12-31",
-      years: 0,
+      birthdate: new Date(date).toISOString(),
+      years: years,
       address: data.address,
       phone: data.phone,
       profession: data.profession,
@@ -178,13 +265,6 @@ const Base = slice => {
     }
   };
 
-  function handleChange(){
-    {register("birthday", {
-     required: true,
-     required: true,
-     minLength: 8,
-   })}
- }
  
   return (
     <>
@@ -267,7 +347,49 @@ const Base = slice => {
               <label htmlFor="birthday">
                 {birthday || ""}
               </label>
-              <div className="dateText">
+              {/* <pre>{JSON.stringify(date, null, 2 )}</pre> */}
+              <SampleContainer>
+              <div className="Sample__container__content">
+                <DatePicker 
+                 calendarAriaLabel="Toggle calendar"
+                 clearAriaLabel="Clear value"
+                 dayAriaLabel="Day"
+                 monthAriaLabel="Month"
+                 nativeInputAriaLabel="Date"
+                 
+                 yearAriaLabel="Year"
+                 
+                // onChange={setDate} 
+                onChange={handleChange} 
+                value={date} 
+                />
+                <span 
+                id="years"
+                  className="date"
+                >{years} años</span>
+              </div>
+              </SampleContainer>
+              {/* <Controller
+                name="dateOfBirth"
+                control={control}
+                defaultValue={date}
+                render={() => (
+                  
+
+
+              <DatePicker 
+                label="Birth date" 
+                className="max-w-[284px]" 
+                isRequired
+                value={date} 
+                onChange={setDate} 
+              />
+                )}
+              /> */}
+        
+        
+
+              {/* <div className="dateText">
                 <span style={{
                         height: "48px",
                         width: "40 !important",
@@ -308,17 +430,15 @@ const Base = slice => {
                   name="birthday"
                   id="birthday"
                   className={errors.birthday && "error"}
-                /> */}
-                {/* <span
-                  className="date"
-                >32 años</span> */}
-              </div>
+                /> 
+                 
+              </div> */}
               {/* <span className="error">
                 {errors.birthday && "Campo obligatorio"}
               </span> */}
 
               
-              {/* --------  FECHA DE NACIMIENTO  --------- */}
+              {/* --------  ADDRESS  --------- */}
               <label htmlFor="address">
                 {address || ""}
               </label>

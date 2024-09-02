@@ -1,5 +1,111 @@
 import styled from "styled-components";
 
+export const SampleContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  // margin: 10px 0;
+  padding: 0px;
+  
+  margin: 0px;
+  
+  button.react-date-picker__clear-button.react-date-picker__button{
+    display:none !important;
+  
+  }
+  
+  
+  .react-calendar__navigation{
+    span{
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 26px;
+      color: #605E5C;
+
+    }
+    }
+    
+    
+    svg {
+    margin-left: 10px;
+    stroke: #605E5C;
+    }
+  .react-calendar{
+  
+  
+  
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 26px;
+    color: #605E5C;
+    font-family: Quicksand,sans-serif;
+    // margin-top: 14px;
+    margin-bottom: 8px;
+    border: 1px solid rgba(0,17,51,0.15);
+    border-radius: 6px;
+    padding:8px;
+    letter-spacing: 0px;
+    color: rgba(0,17,51,0.8);
+  }
+  
+  .Sample__container__content {
+    display: flex;
+    max-width: 100%;
+    flex-basis: 420px;
+    flex-direction: row;
+    flex-grow: 100;
+    align-items: center;
+    
+    #years{
+      margin-left: 30px;
+      font-family: Quicksand,sans-serif;
+      font-weight: 400;
+      font-size: 16px;
+      color: rgba(0,17,51,0.8);
+    }
+  }
+  .Sample input,
+  .Sample button {
+    font: inherit;
+  }
+.react-date-picker__wrapper {
+    border: 1;
+    border-radius: 10px;
+    height: 48px;
+    width: 100%;
+    border: 1px solid rgba(0,17,51,0.15);
+    border-radius: 6px;
+    // padding: 13px;
+    color: rgba(0,17,51,0.8);
+    font-family: Quicksand,sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    outline: none;
+    box-shadow: 0 0 0 0 transparent;
+    
+  .react-date-picker__inputGroup > input{
+    border: 0;
+    margin:0;
+    padding:0;
+    padding-left: 8px;
+  }
+}
+  .Sample header {
+    background-color: #323639;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    color: white;
+  }
+
+  .Sample header h1 {
+    font-size: inherit;
+    margin: 0;
+  }
+`;
+
 export const PageContainer = styled.div`
   flex-direction: column;
   justify-content: center;
