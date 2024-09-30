@@ -35,8 +35,6 @@ const Base = slice => {
 
 export const NoButton = SliceFactory(Base, {
   sectionContainerProps: {
-    style: {
-      backgroundImage: "linear-gradient(188deg, #474747 , #474747 65% )"
-    }
+    style: { backgroundImage: "linear-gradient(188deg, #474747 , #474747 65% )" }
   }
 });
