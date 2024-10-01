@@ -16,6 +16,7 @@ export const createAcademyStudents = /* GraphQL */ `
       medicalHistory
       emergencyContact
       isPaid
+      status
       createdAt
       updatedAt
       __typename

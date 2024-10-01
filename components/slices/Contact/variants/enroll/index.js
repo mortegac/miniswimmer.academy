@@ -190,7 +190,7 @@ const Base = slice => {
       to_name: data.name,
       to_email: data.email,
       to_birthday: date,
-      // to_years: data.,
+      to_years: years,
       to_address: data.address,
       to_phone: data.phone,
       to_profession: data.profession,
@@ -249,6 +249,8 @@ const Base = slice => {
       medicalHistory: data.medicalhistory,
       emergencyContact: data.emergencycontact,
       isPaid: false,
+      isSponsored: false,
+      status: "CERTIFICATION_IN_PROGRESS",
     })
   
   
