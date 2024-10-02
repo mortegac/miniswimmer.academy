@@ -10,6 +10,7 @@ import Metrics from './Metrics';
 import Projects from './Projects';
 import Services from './Services';
 import Staff from './Staff';
+import Graduate from './Graduate';
 
 export {
 	CardList,
@@ -21,7 +22,7 @@ export {
 	Metrics,
 	Projects,
 	Services,
-	Staff,
+	Graduate,
 };
 
 export const components = {
@@ -35,4 +36,5 @@ export const components = {
 	projects: Projects,
 	services: Services,
 	staff: Staff,
+	graduate: Graduate,
 };

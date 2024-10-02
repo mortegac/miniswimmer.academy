@@ -657,6 +657,128 @@
           }
         }
       },
+      "graduate": {
+        "library": "slices",
+        "id": "graduate",
+        "name": "Graduate",
+        "description": "Graduate",
+        "model": {
+          "id": "graduate",
+          "type": "SharedSlice",
+          "name": "Graduate",
+          "description": "Graduate",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Graduate",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                }
+              },
+              "items": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "name": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "name",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "country": {
+                  "type": "Select",
+                  "config": {
+                    "label": "country",
+                    "placeholder": "",
+                    "options": [
+                      "CHILE",
+                      "ESTADOS UNIDOS",
+                      "COLOMBIA",
+                      "ARGENTINA",
+                      "PANAMA"
+                    ],
+                    "default_value": "CHILE"
+                  }
+                },
+                "courses": {
+                  "type": "Text",
+                  "config": {
+                    "label": "courses",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1545239351-1141bd82e8a6"
+                },
+                "name": [
+                  {
+                    "type": "paragraph",
+                    "text": "Nostrud ut qui ipsum duis cillum non laborum excepteur. Nisi adipisicing enim incididunt ad excepteur.",
+                    "spans": []
+                  }
+                ],
+                "country": "CHILE",
+                "courses": "prize"
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Vegetable",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "graduate"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/manu/_CODE/MINISWIMMER.us/miniswimmer.academy/slices/Graduate/default/preview.png",
+            "width": 1836,
+            "height": 878
+          }
+        }
+      },
       "hero": {
         "library": "slices",
         "id": "hero",

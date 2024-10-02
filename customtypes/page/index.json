@@ -55,10 +55,10 @@
             "clients": {
               "type": "SharedSlice"
             },
-            "staff": {
+            "contact": {
               "type": "SharedSlice"
             },
-            "contact": {
+            "graduate": {
               "type": "SharedSlice"
             }
           }
