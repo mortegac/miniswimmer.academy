@@ -9,8 +9,6 @@ export const Content = styled.div`
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     flex-direction: column;
   }
-  // @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
-  // }
   h2 {
     margin: 0;
     margin-bottom: 24px;
@@ -20,7 +18,6 @@ export const Content = styled.div`
     color: ${(props) => props.theme.colors.textDarkblue};
     text-align: center;
     @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-      // width: 70%;
       font-weight: ${(props) => props.theme.typography.h2.desktop.fontWeight};
       line-height: ${(props) => props.theme.typography.h2.desktop.lineHeight};
       font-size: ${(props) => props.theme.typography.h2.desktop.fontSize};
@@ -33,10 +30,7 @@ export const Description = styled.div`
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  // margin-right: 50px;
-  // margin-left: 50px;
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    // width: 100%;
     margin-right: 0;
   }
 `;
@@ -55,7 +49,6 @@ export const ListContainer = styled.div`
   }
   img {
     height: 200px;
-    // @media (max-width: 460px) {
     @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
       padding: 0;
       width: 100%;
@@ -148,6 +141,7 @@ export const TextContainer = styled.div`
   .flag {
     font-size: 36px;
     margin: 8px;
+    text-align: center;
   }
   h3 {
     margin: 0;
@@ -157,7 +151,6 @@ export const TextContainer = styled.div`
     text-align: center;
     color: ${(props) => props.theme.colors.textDarkblue};
     @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-      // width: 70%;
       font-weight: ${(props) => props.theme.typography.h3.desktop.fontWeight};
       line-height: ${(props) => props.theme.typography.h3.desktop.lineHeight};
       font-size: ${(props) => props.theme.typography.h3.desktop.fontSize};
@@ -170,7 +163,6 @@ export const TextContainer = styled.div`
     font-size: 16px;
     color: ${(props) => props.theme.colors.textPrimary};
     @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-      width: 70%;
       font-weight: ${(props) => props.theme.typography.p.desktop.fontWeight};
       line-height: ${(props) => props.theme.typography.p.desktop.lineHeight};
       font-size: ${(props) => props.theme.typography.p.desktop.fontSize};
@@ -186,9 +178,7 @@ export const ItemsContainer = styled.ul`
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
-  // justify-content: space-between;
   align-items: center;
-  // width: 100%;
   @media (max-width: 768px) {
     justify-content: center;
     margin-bottom: 0px;
@@ -201,9 +191,7 @@ export const ItemsContainer = styled.ul`
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    // margin: 10px;
     @media (max-width: 768px) {
-      // width: 50%;
     }
     @media (max-width: 500px) {
       width: 100%;
