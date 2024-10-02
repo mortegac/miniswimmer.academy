@@ -35,7 +35,7 @@ const Base = (props) => {
           {Array.isArray(props.items)
             ? props.items.map((box, index) => {
               const TypeOfFlag = typeOfFlag[box.country] || "";
-              return index <= 10 ? (
+              return (
                 <li className="item" key={`box-item-${index}`}>
                   <ListContainer>
                     <img src={box?.image?.url || "-"} alt="" />
@@ -52,7 +52,7 @@ const Base = (props) => {
                     </DataContainer>
                   </ListContainer>
                 </li>
-              ) : null;
+              ) 
             })
             : null}
         </ItemsContainer>
