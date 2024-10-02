@@ -9,6 +9,8 @@ import { ThemeProvider } from "styled-components";
 
 import { repositoryName, linkResolver } from "../prismicio";
 import { GlobalStyle, Theme } from "../components/styles";
+
+
 import * as gtag from '../utils/gtag'
 
 const internalLinkComponent = ({ href, children, ...props }) => (

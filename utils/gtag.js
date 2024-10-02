@@ -1,5 +1,5 @@
 /** TODO: Crear Google TAG  */
-export const GA_TRACKING_ID = "G-XV0DBNC7KV"
+export const GA_TRACKING_ID = "G-4JQFGNDY4Z"
 
 // TODO: Chequear si es correcto el  GA_TRACKING_ID
 
