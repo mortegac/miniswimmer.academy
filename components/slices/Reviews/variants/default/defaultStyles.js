@@ -12,6 +12,10 @@ export const MainContainer = styled.div`
   h2 {
     text-align: center;
   }
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    padding-top: 22px; 
+
+  }
 `;
 
 export const Header = styled.div`

@@ -80,11 +80,7 @@ flex-direction: column;
 justify-content: center;
 margin-bottom: 8px;
 margin-top:24px;
-  // padding: 24px;
-  // color: #313F5A;
-  // font-size: 16px;
-  // font-weight: 500;
-  // line-height: 24px;
+
 
   h3 {
     margin-top: 16px;
@@ -94,7 +90,7 @@ margin-top:24px;
   .image {
     display: flex;
     justify-content: center;
-    margin-bottom: "14px";
+    margin-bottom: 14px;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     width: 100%;
@@ -130,10 +126,8 @@ export const Card = styled.div`
   background-color: #FBF7FB;
   width: 80%;
   padding: 24px;
-  background: #FBF7FB;
-  border-radius: 25px;  
-  
-  min-height: 200px;
+  border-radius: 25px;    
+  min-height: 300px;
   padding: 52px;
   
   display: flex;
@@ -148,20 +142,27 @@ export const Card = styled.div`
     justify-content: center;
     align-items: center;
     margin-bottom: 14px;
-    img {
-      width: 100%;
+    @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+
+      max-height: 60px;
+      padding: 0px;
     }
   }
 
-  @media (max-width: ${(props) => props.theme.breakpoints.md}) {
-    width: 300px;
-    height: unset;
-  }
   @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
     width: 100%;
-    height: unset;
+    // background-color: pink;
     padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 700px;
   }
+  // @media (max-width: ${(props) => props.theme.breakpoints.md}) {
+  //   width: 300px;
+  //   height: unset;
+  // }
+
 `;
 
 export const Header = styled.div`
@@ -171,17 +172,18 @@ export const Header = styled.div`
   justify-content: center;
   align-items: flex-start;
   margin-bottom: 8px;
+  
   h3 {
     font-size: 22px;
   }
-   img {
-      height: 120px;
-      @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
-        padding: 0;
-        width: 100%;
-        height: 100%;
-      }
+  img {
+    height: 120px;
+    @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+      padding: 0;
+      width: 70%;
+      height: 100%;
     }
+  }
   .imageBox{
     width: 100%;
     margin-bottom: 16px;
@@ -190,16 +192,40 @@ export const Header = styled.div`
     flex-wrap: no-wrap;
     align-items: center;
     justify-content: flex-start;
+    @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
   }
   .boxNameStart{
     margin-left: 24px;
     display: flex;
     flex-direction: column;
+    @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+       margin: 0px;
+       margin-top: 16px;
+      
+    }
   }
   .boxStart{
     display: flex;
     flex-direction: row;
+      @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+      justify-content: center;
+      align-items: center;
   }
+    
+  }
+  @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+    p {
+      // background-color: green;
+      padding: 0px 16px 0px 16px;
+    }
+
+  }
+  
 `;
 export const Footer = styled.div`
   width: 100%;
