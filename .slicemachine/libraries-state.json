@@ -1858,6 +1858,142 @@
           }
         }
       },
+      "reviews": {
+        "library": "slices",
+        "id": "reviews",
+        "name": "Reviews",
+        "description": "Reviews",
+        "model": {
+          "id": "reviews",
+          "type": "SharedSlice",
+          "name": "Reviews",
+          "description": "Reviews",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Reviews",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "Title",
+                    "placeholder": "This is where it all begins...",
+                    "allowTargetBlank": true,
+                    "single": "heading2,strong,paragraph"
+                  }
+                }
+              },
+              "items": {
+                "image": {
+                  "type": "Image",
+                  "config": {
+                    "label": "image",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                },
+                "name": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "name",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "numbersofstars": {
+                  "type": "Number",
+                  "config": {
+                    "label": "numbersOfStars",
+                    "placeholder": ""
+                  }
+                },
+                "recomendation": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "recomendation",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "url": {
+                  "type": "Link",
+                  "config": {
+                    "label": "url",
+                    "placeholder": "Url External Review",
+                    "allowTargetBlank": true,
+                    "select": null
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "image": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1600861194802-a2b11076bc51"
+                },
+                "name": [
+                  {
+                    "type": "paragraph",
+                    "text": "Incididunt ad do commodo elit nulla aliqua ad voluptate reprehenderit magna elit aute eu cillum. Voluptate id excepteur velit in nisi id ea aliqua incididunt dolore enim. Sint consectetur sunt veniam velit officia irure.",
+                    "spans": []
+                  }
+                ],
+                "numbersofstars": 26,
+                "recomendation": [
+                  {
+                    "type": "paragraph",
+                    "text": "Ad aliqua quis excepteur magna officia minim ut.",
+                    "spans": []
+                  }
+                ],
+                "url": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                }
+              }
+            ],
+            "primary": {
+              "title": [
+                {
+                  "type": "paragraph",
+                  "text": "Laborum anim non proident ullamco est pariatur consectetur in reprehenderit amet laboris dolor sint sint.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "reviews"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {
+          "default": {
+            "path": "/Users/manu/_CODE/MINISWIMMER.us/miniswimmer.academy/slices/Reviews/default/preview.png",
+            "width": 1064,
+            "height": 548
+          }
+        }
+      },
       "services": {
         "library": "slices",
         "id": "services",

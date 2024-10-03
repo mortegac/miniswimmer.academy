@@ -28,7 +28,7 @@ export const Carousel = ({ items }) => {
         pagination={{ clickable: true }}
         loop={true}
         autoplay={{
-          delay: 3000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         breakpoints={{
@@ -36,7 +36,7 @@ export const Carousel = ({ items }) => {
             slidesPerView: 1,
           },
           960: {
-            slidesPerView: 3,
+            slidesPerView: 1,
             centeredSlidesBounds: true,
           },
         }}
@@ -45,7 +45,26 @@ export const Carousel = ({ items }) => {
           <SwiperSlide key={i}>
             <Card>
               <Header>
-                {slide.cardImage && (
+                <div className='imageBox'>
+                  <img src={slide?.image?.url || "-"} alt="" />
+                  <div className="boxNameStart">                 
+                    <PrismicRichText field={slide.name}/>
+                    <div className="boxStart">
+                      { Array.from({ length: 5 }, (_, index) => (
+                        <svg width="28" height="28" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0882 3L17.2883 16.83L2.08936 19.035L13.0888 29.805L10.4884 45L24.0882 37.83L37.688 45L35.0876 29.805L46.087 19.05L30.8881 16.83L24.0882 3Z" 
+                            fill={index < slide?.numbersofstars ? "#AE5EAB" : "lightgray"}/>
+                        </svg>
+                        ))
+                      } 
+                    </div>
+                  </div>
+                </div>
+                 {
+                    slide?.recomendation &&
+                    <PrismicRichText field={slide?.recomendation}/>
+                  }                      
+                {/* {slide.cardImage && (
                   <>
                     <div className="image">
                       <img
@@ -60,7 +79,7 @@ export const Carousel = ({ items }) => {
                       {slide?.cardDescription && <PrismicRichText field={slide?.cardDescription || ""} />}
                     </TextDescription>
                   </>
-                )}
+                )} */}
               </Header>
             </Card>
           </SwiperSlide>

@@ -60,6 +60,9 @@
             },
             "contact": {
               "type": "SharedSlice"
+            },
+            "reviews": {
+              "type": "SharedSlice"
             }
           }
         }

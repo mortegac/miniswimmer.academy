@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/Reviews';
+
+export default {
+  title: 'slices/Reviews'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"image":{"dimensions":{"width":900,"height":500},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1600861194802-a2b11076bc51"},"name":[{"type":"paragraph","text":"Incididunt ad do commodo elit nulla aliqua ad voluptate reprehenderit magna elit aute eu cillum. Voluptate id excepteur velit in nisi id ea aliqua incididunt dolore enim. Sint consectetur sunt veniam velit officia irure.","spans":[]}],"numbersofstars":26,"recomendation":[{"type":"paragraph","text":"Ad aliqua quis excepteur magna officia minim ut.","spans":[]}],"url":{"link_type":"Web","url":"https://prismic.io"}}],"primary":{"title":[{"type":"paragraph","text":"Laborum anim non proident ullamco est pariatur consectetur in reprehenderit amet laboris dolor sint sint.","spans":[]}]},"slice_type":"reviews","id":"_Default"}} />
+_Default.storyName = ''

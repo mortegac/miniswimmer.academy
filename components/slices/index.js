@@ -1,10 +1,10 @@
 import { HeroSlice } from "./HeroSlice";
-import { IdeasSlice } from "./IdeasSlice";
+import { IdeasSlice } from "./Ideas";
 import { LogoList } from "./LogoList";
 import { Metrics } from "./Metrics";
 import { Services } from "./Services";
 import { ProjectSlice } from "./Projects";
-import { Clients } from "./Clients";
+import { Reviews } from "./Reviews";
 
 
 export {
@@ -14,6 +14,7 @@ export {
   Metrics,
   Services,
   ProjectSlice,
-  Clients
+  Reviews,
+  
  
 };

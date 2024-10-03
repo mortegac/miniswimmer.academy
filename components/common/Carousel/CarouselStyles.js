@@ -39,10 +39,11 @@ export const CarouselContainer = styled.div`
     align-items: center;
   }
   .swiper-button-prev {
-    color: ${(props) => props.theme.colors.primary};
+    color: #AE5EAB;
   }
   .swiper-button-next {
-    color: ${(props) => props.theme.colors.primary};
+    color: #AE5EAB;
+    // color: ${(props) => props.theme.colors.primary};
   }
   .swiper-pagination-bullet {
     background: ${(props) => props.theme.colors.primary};
@@ -56,7 +57,7 @@ export const CarouselContainer = styled.div`
     width: 6px;
     height: 6px;
     position: relative;
-    outline: 2px solid ${(props) => props.theme.colors.primary};
+    outline: 2px solid #AE5EAB;;
   }
   @media (max-width: ${(props) => props.theme.breakpoints.md}) {
     .swiper-button-prev,
@@ -125,17 +126,21 @@ justify-content: center;
   }
 `;
 export const Card = styled.div`
-  background-color: white;
+
+  background-color: #FBF7FB;
   width: 80%;
-  min-height: 290px;
+  padding: 24px;
+  background: #FBF7FB;
+  border-radius: 25px;  
+  
+  min-height: 200px;
   padding: 52px;
   
-  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  min-width: ${(props) => props.dandelion && "360px"};
+  min-width: 360px;
   .image {
     width: 100%;
     max-height: 160px;
@@ -167,10 +172,33 @@ export const Header = styled.div`
   align-items: flex-start;
   margin-bottom: 8px;
   h3 {
-    font-size: 16px;
+    font-size: 22px;
   }
-  .image{
+   img {
+      height: 120px;
+      @media (max-width: ${(props) => props.theme.breakpoints.sm}) {
+        padding: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  .imageBox{
     width: 100%;
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .boxNameStart{
+    margin-left: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .boxStart{
+    display: flex;
+    flex-direction: row;
   }
 `;
 export const Footer = styled.div`

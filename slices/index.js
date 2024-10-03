@@ -3,38 +3,42 @@
 import CardList from './CardList';
 import Comparative from './Comparative';
 import Contact from './Contact';
+import Graduate from './Graduate';
 import Hero from './Hero';
 import Ideas from './Ideas';
 import LogoList from './LogoList';
 import Metrics from './Metrics';
 import Projects from './Projects';
+import Reviews from './Reviews';
 import Services from './Services';
 import Staff from './Staff';
-import Graduate from './Graduate';
 
 export {
 	CardList,
 	Comparative,
 	Contact,
+	Graduate,
 	Hero,
 	Ideas,
 	LogoList,
 	Metrics,
 	Projects,
+	Reviews,
 	Services,
-	Graduate,
+	Staff,
 };
 
 export const components = {
 	card_list: CardList,
 	clients: Comparative,
 	contact: Contact,
+	graduate: Graduate,
 	hero: Hero,
 	ideas: Ideas,
 	logo_list: LogoList,
 	metrics: Metrics,
 	projects: Projects,
+	reviews: Reviews,
 	services: Services,
 	staff: Staff,
-	graduate: Graduate,
 };

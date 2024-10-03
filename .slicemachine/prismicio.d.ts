@@ -126,7 +126,7 @@ interface FootermenuDocumentData {
  */
 export type FootermenuDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<FootermenuDocumentData>, "footermenu", Lang>;
 
-type HomepageDocumentDataSlicesSlice = HeroSlice | IdeasSlice | CardListSlice | LogoListSlice | MetricsSlice | ServicesSlice | ProjectsSlice | ClientsSlice | StaffSlice | ContactSlice
+type HomepageDocumentDataSlicesSlice = HeroSlice | IdeasSlice | CardListSlice | LogoListSlice | MetricsSlice | ServicesSlice | ProjectsSlice | ClientsSlice | StaffSlice | ContactSlice | ReviewsSlice
 
 /**
  * Content for homepage documents
@@ -273,7 +273,7 @@ interface MenutopDocumentData {
  */
 export type MenutopDocument<Lang extends string = string> = prismic.PrismicDocumentWithoutUID<Simplify<MenutopDocumentData>, "menutop", Lang>;
 
-type PageDocumentDataSlicesSlice = HeroSlice | IdeasSlice | CardListSlice | LogoListSlice | MetricsSlice | ServicesSlice | ProjectsSlice | ClientsSlice | ContactSlice | GraduateSlice
+type PageDocumentDataSlicesSlice = HeroSlice | IdeasSlice | CardListSlice | LogoListSlice | MetricsSlice | ServicesSlice | ProjectsSlice | ClientsSlice | ContactSlice | GraduateSlice | ReviewsSlice
 
 /**
  * Content for page documents
@@ -1674,6 +1674,99 @@ type ProjectsSliceVariation = ProjectsSliceDefault
 export type ProjectsSlice = prismic.SharedSlice<"projects", ProjectsSliceVariation>;
 
 /**
+ * Primary content in *Reviews → Default → Primary*
+ */
+export interface ReviewsSliceDefaultPrimary {
+	/**
+	 * Title field in *Reviews → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: This is where it all begins...
+	 * - **API ID Path**: reviews.default.primary.title
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	title: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *Reviews → Items*
+ */
+export interface ReviewsSliceDefaultItem {
+	/**
+	 * image field in *Reviews → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: reviews.items[].image
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+	
+	/**
+	 * name field in *Reviews → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: reviews.items[].name
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	name: prismic.RichTextField;
+	
+	/**
+	 * numbersOfStars field in *Reviews → Items*
+	 *
+	 * - **Field Type**: Number
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: reviews.items[].numbersofstars
+	 * - **Documentation**: https://prismic.io/docs/field#number
+	 */
+	numbersofstars: prismic.NumberField;
+	
+	/**
+	 * recomendation field in *Reviews → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: reviews.items[].recomendation
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	recomendation: prismic.RichTextField;
+	
+	/**
+	 * url field in *Reviews → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: Url External Review
+	 * - **API ID Path**: reviews.items[].url
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	url: prismic.LinkField;
+}
+
+/**
+ * Default variation for Reviews Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Reviews
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ReviewsSliceDefault = prismic.SharedSliceVariation<"default", Simplify<ReviewsSliceDefaultPrimary>, Simplify<ReviewsSliceDefaultItem>>;
+
+/**
+ * Slice variation for *Reviews*
+ */
+type ReviewsSliceVariation = ReviewsSliceDefault
+
+/**
+ * Reviews Shared Slice
+ *
+ * - **API ID**: `reviews`
+ * - **Description**: Reviews
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type ReviewsSlice = prismic.SharedSlice<"reviews", ReviewsSliceVariation>;
+
+/**
  * Primary content in *Services → Default → Primary*
  */
 export interface ServicesSliceDefaultPrimary {
@@ -2103,6 +2196,11 @@ declare module "@prismicio/client" {
 			ProjectsSliceDefaultPrimary,
 			ProjectsSliceVariation,
 			ProjectsSliceDefault,
+			ReviewsSlice,
+			ReviewsSliceDefaultPrimary,
+			ReviewsSliceDefaultItem,
+			ReviewsSliceVariation,
+			ReviewsSliceDefault,
 			ServicesSlice,
 			ServicesSliceDefaultPrimary,
 			ServicesSliceDefaultItem,

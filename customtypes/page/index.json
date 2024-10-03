@@ -60,6 +60,9 @@
             },
             "graduate": {
               "type": "SharedSlice"
+            },
+            "reviews": {
+              "type": "SharedSlice"
             }
           }
         }

@@ -10,9 +10,23 @@
         "primary": {}
       }
     },
-    "Services": {}
+    "Services": {},
+    "Reviews": {
+      "default": {
+        "primary": {
+          "title": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    }
   },
   "_cts": {
-    "page": {}
+    "page": {},
+    "homepage": {}
   }
 }
