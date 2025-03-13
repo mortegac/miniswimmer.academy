@@ -24,7 +24,7 @@ export default function Certificado() {
         {/* Meta tags para Open Graph (Facebook, Instagram, LinkedIn) */}
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
-        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image" content={`https://miniswimmer.academy/certificates/preview/${id}.png`} />
         <meta property="og:url" content={`https://miniswimmer.academy/certificates/${id}`} />
         <meta property="og:type" content="website" />
         
