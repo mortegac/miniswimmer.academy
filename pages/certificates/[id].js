@@ -12,7 +12,7 @@ export default function Certificado() {
   // Información para compartir en redes sociales
   const title = `Certificado de ${id}`;
   const description = `Visualiza mi certificado de ${id}`;
-  const imageUrl = `/certificates/preview/${id}.jpg`; // Una imagen previa del certificado
+  const imageUrl = `/certificates/preview/${id}.png`; // Una imagen previa del certificado
 
   return (
     <>
