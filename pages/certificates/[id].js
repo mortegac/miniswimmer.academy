@@ -34,7 +34,7 @@ export default function Certificado() {
       
       <div>
         {/* <h1>Certificado: {id}</h1> */}
-        <iframe src={pdfUrl} width="100%" height="800px" />
+        <iframe src={pdfUrl} width="100%" height="900px" />
         
         {/* Botones para compartir */}
         <div className="share-buttons">
