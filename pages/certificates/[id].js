@@ -96,11 +96,11 @@ export default function Certificate() {
         />
         
         {/* Botones para compartir */}
-        <div className="share-buttons">
+        {/* <div className="share-buttons">
            <button onClick={() => shareTo('facebook')}>Compartir en Facebook</button>
            <button onClick={() => shareTo('instagram')}>Compartir en Instagram</button>
            <button onClick={() => shareTo('linkedin')}>Compartir en LinkedIn</button>
-         </div>
+         </div> */}
       </div>
     </>
   );
