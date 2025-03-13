@@ -45,8 +45,8 @@ export default function Certificate() {
         <meta property="og:type" content="website" />
         
         {/* Meta tags para imagen con todas las propiedades */}
-        <meta property="og:image" content={imageUrl} />
-        <meta name="og:image" content={`https://miniswimmer.academy/certificates/preview/${id}.png`}></meta>
+        <meta property="og:image" content="https://images.prismic.io/miniswimmer-academy/Z9Mg3xsAHJWomg1H_certificacion.png" />
+        <meta name="og:image" content="https://images.prismic.io/miniswimmer-academy/Z9Mg3xsAHJWomg1H_certificacion.png"></meta>
         <meta property="og:image:secure_url" content={imageUrl} />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
