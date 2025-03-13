@@ -39,25 +39,49 @@ export default function Certificate() {
         <meta name="description" content={description} />
         
         {/* Meta tags Open Graph esenciales */}
-        <meta property="og:title" content={title} />
+        {/* <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={pageUrl} />
-        <meta property="og:type" content="website" />
+        <meta property="og:type" content="website" /> */}
         
         {/* Meta tags para imagen con todas las propiedades */}
-        <meta property="og:image" content="https://images.prismic.io/miniswimmer-academy/Z9Mg3xsAHJWomg1H_certificacion.png" />
+        {/* <meta property="og:image" content="https://images.prismic.io/miniswimmer-academy/Z9Mg3xsAHJWomg1H_certificacion.png" />
         <meta name="og:image" content="https://images.prismic.io/miniswimmer-academy/Z9Mg3xsAHJWomg1H_certificacion.png"></meta>
         <meta property="og:image:secure_url" content={imageUrl} />
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content="MiniSwimmer Academy Certificate" />
+        <meta property="og:image:alt" content="MiniSwimmer Academy Certificate" /> */}
         
         {/* Meta tags para Twitter */}
-        <meta name="twitter:card" content="summary_large_image" />
+        {/* <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={title} />
         <meta name="twitter:description" content={description} />
-        <meta name="twitter:image" content={imageUrl} />
+        <meta name="twitter:image" content={imageUrl} /> */}
+        <meta name="description" content="View my official swimming certification from MiniSwimmer Academy"/>
+<meta name="title" content="View my official swimming certification from MiniSwimmer Academy"/>
+<meta name="medium" content="mult"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="robots" content="noindex,follow"/>
+<meta property="fb:app_id" content="637938008725375"/>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta property="og:title" content="Certificado de finalizacion certificacion Coach level 1"/>
+<meta property="og:url" content={`https://miniswimmer.academy/certificates/${id}`}>
+<meta property="og:description" content="Mi Certificado de finalizacion certificacion Coach level 1"/>
+<meta property="og:image" content="https://images.prismic.io/miniswimmer-academy/Z9Mg3xsAHJWomg1H_certificacion.png"/>
+<meta property="og:image:secure_url" content="https://images.prismic.io/miniswimmer-academy/Z9Mg3xsAHJWomg1H_certificacion.png"/>
+<meta property="og:type" content="video_lecture"/>
+<meta property="og:site_name" content="Miniswimmer"/>
+<meta property="og:locale" content="es_ES"/>
+<meta name="twitter:domain" content="miniswimmer.academy"/>
+<meta name="twitter:title" content="Certificado de finalizacion certificacion Coach level 1"/>
+<meta name="twitter:url" content={`https://miniswimmer.academy/certificates/${id}`}/>
+<meta name="twitter:description" content="Certificado de finalizacion certificacion Coach level 1"/>
+<meta name="twitter:image" content="https://images.prismic.io/miniswimmer-academy/Z9Mg3xsAHJWomg1H_certificacion.png"/>
+<meta name="twitter:site" content="@miniswimmer"/>
       </Head>
       
       {/* Contenido de la página */}
