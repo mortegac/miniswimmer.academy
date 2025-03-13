@@ -69,7 +69,7 @@ export default function Certificate() {
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta property="og:title" content="Certificado de finalizacion certificacion Coach level 1"/>
-<meta property="og:url" content={`https://miniswimmer.academy/certificates/${id}`}>
+<meta property="og:url" content={`https://miniswimmer.academy/certificates/${id}`}/>
 <meta property="og:description" content="Mi Certificado de finalizacion certificacion Coach level 1"/>
 <meta property="og:image" content="https://images.prismic.io/miniswimmer-academy/Z9Mg3xsAHJWomg1H_certificacion.png"/>
 <meta property="og:image:secure_url" content="https://images.prismic.io/miniswimmer-academy/Z9Mg3xsAHJWomg1H_certificacion.png"/>
