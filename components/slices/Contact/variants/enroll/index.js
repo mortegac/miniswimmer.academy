@@ -19,18 +19,17 @@ import { createEnroll } from "../../../../../services/enroll.services"
 
 import { Amplify } from "aws-amplify";
 // import { config } from "../../../../../utils/config";
-Amplify.configure({
-  "aws_project_region": "us-east-2",
-  "aws_appsync_graphqlEndpoint": "https://4mtfzd2aubcrhnnaclzkxosnoq.appsync-api.us-east-2.amazonaws.com/graphql",
+Amplify.configure({ "aws_project_region": "us-east-2",
+  "aws_appsync_graphqlEndpoint": "https://m2hmnszh4je2rk3mdemcrudxw4.appsync-api.us-east-2.amazonaws.com/graphql",
   "aws_appsync_region": "us-east-2",
   "aws_appsync_authenticationType": "API_KEY",
-  "aws_appsync_apiKey": "da2-vk3lmmvnk5bmbpt6vkfz7xghpi",
-  "aws_cognito_identity_pool_id": "us-east-2:63f9c713-19f8-40ff-a99b-1d7006191372",
+  "aws_appsync_apiKey": "da2-ccnqqjpecvc33ijvwiphn2gjku",
+  "aws_cognito_identity_pool_id": "us-east-2:70055e20-cfe6-4cef-9b1c-4a0649c450d5",
   "aws_cognito_region": "us-east-2",
-  "aws_user_pools_id": "us-east-2_bpfOANSWX",
-  "aws_user_pools_web_client_id": "6rq7qopcr25728fuc62k9k8igv",
+  "aws_user_pools_id": "us-east-2_RnbT7nPr9",
+  "aws_user_pools_web_client_id": "3c7425phukqjelo0mt3833h6kj",
   "oauth": {
-      "domain": "apiclientsbb306568-bb306568-main.auth.us-east-2.amazoncognito.com",
+      "domain": "apiclientsbb306568-bb306568-prod.auth.us-east-2.amazoncognito.com",
       "scope": [
           "phone",
           "email",
@@ -130,7 +129,7 @@ function calcularEdad(fechaNacimiento) {
 // }
 
 const Base = slice => {
-  const [date, setDate] = React.useState(new Date("01-01-1980 00:00:00"));
+  const [date, setDate] = React.useState(null);
   const [years, setYears] = React.useState("");
   const { title, subtitle, email, birthday, name, address, phone, profession, studyinthearea, medicalhistory, emergencycontact } = slice.primary;
   const [isSentEmail, setIsSentEmail] = useState({
@@ -154,24 +153,32 @@ const Base = slice => {
   // function edad(dateChild) { return calcularEdad(dateChild)}
   
   const handleChange = (dateChange) => {
-    window && window.console.log("---dateChange---", dateChange);
+    if (!dateChange) {
+      setDate(null);
+      setYears("");
+      setValue("birthday", null);
+      return;
+    }
     
-    const date = new Date(dateChange).toISOString();
-    const newDate = transformDate(date);
-    const getBirthday= calcularEdad(dateChange);
-    
-    window && window.console.log("---getBirthday---", getBirthday);
-    window && window.console.log("---newDate---", newDate);
-    
-    // const getBirthday:any = tiempoTranscurrido(e.target.value)
-    // setBirthday({month:getBirthday.meses , years:getBirthday.años});
-
-        
-    setValue("birthday", dateChange, {
-      shouldDirty: true
-    });
-    setDate(dateChange);
-    setYears(getBirthday)
+    try {
+      const date = new Date(dateChange);
+      if (isNaN(date.getTime())) {
+        throw new Error('Fecha inválida');
+      }
+      
+      const newDate = transformDate(date);
+      const getBirthday = calcularEdad(dateChange);
+      
+      setValue("birthday", dateChange, {
+        shouldDirty: true
+      });
+      setDate(dateChange);
+      setYears(getBirthday);
+    } catch (error) {
+      console.error('Error al procesar la fecha:', error);
+      setDate(null);
+      setYears("");
+    }
   };
   
   const onSubmit = async (data) => {
@@ -238,20 +245,22 @@ const Base = slice => {
   }
   
   const handlerAddNewEnroll = async (data) => await createEnroll({
-      name: data.name,
-      email: data.email,
-      birthdate: new Date(date).toISOString(),
-      years: years,
-      address: data.address,
-      phone: data.phone,
-      profession: data.profession,
-      studiesRelated: data.studyinthearea,
-      medicalHistory: data.medicalhistory,
-      emergencyContact: data.emergencycontact,
-      isPaid: false,
-      isSponsored: false,
-      status: "CERTIFICATION_IN_PROGRESS",
-    })
+    // ...data,
+    birthdate: date ? new Date(date).toISOString() : null,
+    years: years,
+    address: data.address,
+    phone: data.phone,
+    urlImage:"",
+    profession: data.profession,
+    studiesRelated: data.studyinthearea,
+    medicalHistory: data.medicalhistory,
+    emergencyContact: data.emergencycontact,
+    isPaid: false,
+    isSponsored: false,
+    status: "WEB_FORM_ENTRY",
+    name: data?.name,
+    email: data?.email,
+  })
   
   
   
