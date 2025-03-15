@@ -9,7 +9,7 @@ import { createAcademyStudents } from '../graphql/mutations';
 export const createEnroll = async (input) => {
   try {
 
-    window.console.log('>>>>>>>>>>input: ', input)
+    // window.console.log('>>>>>>>>>>input: ', input)
 
     const response = await API.graphql(graphqlOperation(
       createAcademyStudents,
@@ -17,7 +17,7 @@ export const createEnroll = async (input) => {
       // { input: { ...input } }
     ));
 
-    window.console.log('>>>>>>>>>>createAcademyStudents: ', response)
+    // window.console.log('>>>>>>>>>>createAcademyStudents: ', response)
     return response;
     // return []
 

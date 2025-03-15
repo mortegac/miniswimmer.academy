@@ -258,6 +258,7 @@ const Base = slice => {
     isPaid: false,
     isSponsored: false,
     status: "WEB_FORM_ENTRY",
+    presence: "HYBRID",
     name: data?.name,
     email: data?.email,
   })
