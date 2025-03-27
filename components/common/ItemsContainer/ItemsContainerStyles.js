@@ -11,13 +11,7 @@ export const ItemsWrapper = styled.div`
   }
 `;
 
-export const Box = styled.div`
-padding: 20px 30px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  flex-direction: column;
-`;
+
 export const Item = styled.div`
   background-color: white;
   width: 100%;
@@ -48,7 +42,13 @@ export const Item = styled.div`
   }
 `;
 
-
+export const Box = styled.div`
+padding: 20px 30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+`;
 
 export const Header = styled.div`
   width: 100%;

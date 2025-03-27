@@ -5,6 +5,123 @@ import type * as prismicClient from "@prismicio/client";
 
 type Simplify<T> = { [KeyType in keyof T]: T[KeyType] };
 
+type BlogDocumentDataSlicesSlice = IdeasSlice | LogoListSlice | RelatedContentSlice | LabelsSlice | ServicesSlice
+
+/**
+ * Content for blog documents
+ */
+interface BlogDocumentData {
+	/**
+	 * seotitle field in *blog*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog.seotitle
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	seotitle: prismic.KeyTextField;
+	
+	/**
+	 * seodescription field in *blog*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog.seodescription
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	seodescription: prismic.KeyTextField;
+	
+	/**
+	 * title field in *blog*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog.title
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	title: prismic.KeyTextField;
+	
+	/**
+	 * shortDescription field in *blog*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog.shortdescription
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	shortdescription: prismic.RichTextField;
+	
+	/**
+	 * htmlContent field in *blog*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog.htmlcontent
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	htmlcontent: prismic.KeyTextField;
+	
+	/**
+	 * category field in *blog*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog.category
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	category: prismic.SelectField<"PNL" | "Programación Neurolingüística" | "Coaching" | "Prevención" | "Autonomía en el agua" | "Supervivencia" | "Técnica de autorescate" | "Estimulación temprana" | "Tips embarazadas">;
+	
+	/**
+	 * author field in *blog*
+	 *
+	 * - **Field Type**: Select
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog.author
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#select
+	 */
+	author: prismic.SelectField<"Nicole Rivera" | "Manuel Ortega" | "Andrea San Juan" | "Claudia Rodriguez">;
+	
+	/**
+	 * image field in *blog*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog.image
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	image: prismic.ImageField<never>;
+	
+	/**
+	 * Slice Zone field in *blog*
+	 *
+	 * - **Field Type**: Slice Zone
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: blog.slices[]
+	 * - **Tab**: Main
+	 * - **Documentation**: https://prismic.io/docs/field#slices
+	 */
+	slices: prismic.SliceZone<BlogDocumentDataSlicesSlice>;
+}
+
+/**
+ * blog document from Prismic
+ *
+ * - **API ID**: `blog`
+ * - **Repeatable**: `true`
+ * - **Documentation**: https://prismic.io/docs/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type BlogDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<BlogDocumentData>, "blog", Lang>;
+
 /**
  * Item in *footermenu → linkgroup*
  */
@@ -324,7 +441,7 @@ interface PageDocumentData {
  */
 export type PageDocument<Lang extends string = string> = prismic.PrismicDocumentWithUID<Simplify<PageDocumentData>, "page", Lang>;
 
-export type AllDocumentTypes = FootermenuDocument | HomepageDocument | MenutopDocument | PageDocument;
+export type AllDocumentTypes = BlogDocument | FootermenuDocument | HomepageDocument | MenutopDocument | PageDocument;
 
 /**
  * Primary content in *CardList → Default → Primary*
@@ -1328,6 +1445,44 @@ type IdeasSliceVariation = IdeasSliceDefault | IdeasSliceNoButtonNobg | IdeasSli
 export type IdeasSlice = prismic.SharedSlice<"ideas", IdeasSliceVariation>;
 
 /**
+ * Primary content in *Labels → Items*
+ */
+export interface LabelsSliceDefaultItem {
+	/**
+	 * label field in *Labels → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: labels.items[].label
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	label: prismic.KeyTextField;
+}
+
+/**
+ * Default variation for Labels Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: Labels
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LabelsSliceDefault = prismic.SharedSliceVariation<"default", Record<string, never>, Simplify<LabelsSliceDefaultItem>>;
+
+/**
+ * Slice variation for *Labels*
+ */
+type LabelsSliceVariation = LabelsSliceDefault
+
+/**
+ * Labels Shared Slice
+ *
+ * - **API ID**: `labels`
+ * - **Description**: Labels
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type LabelsSlice = prismic.SharedSlice<"labels", LabelsSliceVariation>;
+
+/**
  * Primary content in *LogoList → Default → Primary*
  */
 export interface LogoListSliceDefaultPrimary {
@@ -1672,6 +1827,99 @@ type ProjectsSliceVariation = ProjectsSliceDefault
  * - **Documentation**: https://prismic.io/docs/slice
  */
 export type ProjectsSlice = prismic.SharedSlice<"projects", ProjectsSliceVariation>;
+
+/**
+ * Primary content in *RelatedContent → Default → Primary*
+ */
+export interface RelatedContentSliceDefaultPrimary {
+	/**
+	 * tittle field in *RelatedContent → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: related_content.default.primary.tittle
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	tittle: prismic.RichTextField;
+	
+	/**
+	 * description field in *RelatedContent → Default → Primary*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: related_content.default.primary.description
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	description: prismic.RichTextField;
+}
+
+/**
+ * Primary content in *RelatedContent → Items*
+ */
+export interface RelatedContentSliceDefaultItem {
+	/**
+	 * tittle field in *RelatedContent → Items*
+	 *
+	 * - **Field Type**: Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: related_content.items[].tittle
+	 * - **Documentation**: https://prismic.io/docs/field#key-text
+	 */
+	tittle: prismic.KeyTextField;
+	
+	/**
+	 * link field in *RelatedContent → Items*
+	 *
+	 * - **Field Type**: Link
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: related_content.items[].link
+	 * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+	 */
+	link: prismic.LinkField;
+	
+	/**
+	 * shortContent field in *RelatedContent → Items*
+	 *
+	 * - **Field Type**: Rich Text
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: related_content.items[].shortcontent
+	 * - **Documentation**: https://prismic.io/docs/field#rich-text-title
+	 */
+	shortcontent: prismic.RichTextField;
+	
+	/**
+	 * shortImage field in *RelatedContent → Items*
+	 *
+	 * - **Field Type**: Image
+	 * - **Placeholder**: *None*
+	 * - **API ID Path**: related_content.items[].shortimage
+	 * - **Documentation**: https://prismic.io/docs/field#image
+	 */
+	shortimage: prismic.ImageField<never>;
+}
+
+/**
+ * Default variation for RelatedContent Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: RelatedContent
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type RelatedContentSliceDefault = prismic.SharedSliceVariation<"default", Simplify<RelatedContentSliceDefaultPrimary>, Simplify<RelatedContentSliceDefaultItem>>;
+
+/**
+ * Slice variation for *RelatedContent*
+ */
+type RelatedContentSliceVariation = RelatedContentSliceDefault
+
+/**
+ * RelatedContent Shared Slice
+ *
+ * - **API ID**: `related_content`
+ * - **Description**: RelatedContent
+ * - **Documentation**: https://prismic.io/docs/slice
+ */
+export type RelatedContentSlice = prismic.SharedSlice<"related_content", RelatedContentSliceVariation>;
 
 /**
  * Primary content in *Reviews → Default → Primary*
@@ -2121,6 +2369,9 @@ declare module "@prismicio/client" {
 	
 	namespace Content {
 		export type {
+			BlogDocument,
+			BlogDocumentData,
+			BlogDocumentDataSlicesSlice,
 			FootermenuDocument,
 			FootermenuDocumentData,
 			FootermenuDocumentDataLinkgroupItem,
@@ -2174,6 +2425,10 @@ declare module "@prismicio/client" {
 			IdeasSliceDefault,
 			IdeasSliceNoButtonNobg,
 			IdeasSliceNoButton,
+			LabelsSlice,
+			LabelsSliceDefaultItem,
+			LabelsSliceVariation,
+			LabelsSliceDefault,
 			LogoListSlice,
 			LogoListSliceDefaultPrimary,
 			LogoListSliceDefaultItem,
@@ -2196,6 +2451,11 @@ declare module "@prismicio/client" {
 			ProjectsSliceDefaultPrimary,
 			ProjectsSliceVariation,
 			ProjectsSliceDefault,
+			RelatedContentSlice,
+			RelatedContentSliceDefaultPrimary,
+			RelatedContentSliceDefaultItem,
+			RelatedContentSliceVariation,
+			RelatedContentSliceDefault,
 			ReviewsSlice,
 			ReviewsSliceDefaultPrimary,
 			ReviewsSliceDefaultItem,

@@ -1,0 +1,38 @@
+{
+  "id": "mock-doc-id",
+  "url": null,
+  "type": "blog",
+  "href": null,
+  "tags": [],
+  "first_publication_date": "1970-01-01T00:00:01+0000",
+  "last_publication_date": "1970-01-01T00:00:01+0000",
+  "slugs": [],
+  "linked_documents": [],
+  "lang": "en-us",
+  "alternate_languages": [],
+  "data": {
+    "seotitle": "brown",
+    "seodescription": "person",
+    "title": "see",
+    "shortdescription": [
+      {
+        "type": "paragraph",
+        "text": "Proident sunt in aliquip voluptate reprehenderit cillum id deserunt ipsum non esse est duis.",
+        "spans": []
+      }
+    ],
+    "htmlcontent": "classroom",
+    "category": "Autonomía en el agua",
+    "author": "Andrea San Juan",
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": null,
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1600804931749-2da4ce26c869"
+    },
+    "slices": []
+  }
+}

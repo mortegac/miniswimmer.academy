@@ -1363,6 +1363,56 @@
           }
         }
       },
+      "labels": {
+        "library": "slices",
+        "id": "labels",
+        "name": "Labels",
+        "description": "Labels",
+        "model": {
+          "id": "labels",
+          "type": "SharedSlice",
+          "name": "Labels",
+          "description": "Labels",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Labels",
+              "primary": {},
+              "items": {
+                "label": {
+                  "type": "Text",
+                  "config": {
+                    "label": "label",
+                    "placeholder": ""
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "label": "strike"
+              }
+            ],
+            "primary": {},
+            "slice_type": "labels"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
       "logo_list": {
         "library": "slices",
         "id": "logo_list",
@@ -1857,6 +1907,135 @@
             "height": 626
           }
         }
+      },
+      "related_content": {
+        "library": "slices",
+        "id": "related_content",
+        "name": "RelatedContent",
+        "description": "RelatedContent",
+        "model": {
+          "id": "related_content",
+          "type": "SharedSlice",
+          "name": "RelatedContent",
+          "description": "RelatedContent",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "RelatedContent",
+              "primary": {
+                "tittle": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "tittle",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "description",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "multi": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                }
+              },
+              "items": {
+                "tittle": {
+                  "type": "Text",
+                  "config": {
+                    "label": "tittle",
+                    "placeholder": ""
+                  }
+                },
+                "link": {
+                  "type": "Link",
+                  "config": {
+                    "label": "link",
+                    "placeholder": "",
+                    "select": null
+                  }
+                },
+                "shortcontent": {
+                  "type": "StructuredText",
+                  "config": {
+                    "label": "shortContent",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  }
+                },
+                "shortimage": {
+                  "type": "Image",
+                  "config": {
+                    "label": "shortImage",
+                    "constraint": {},
+                    "thumbnails": []
+                  }
+                }
+              },
+              "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "version": "sktwi1xtmkfgx8626",
+            "items": [
+              {
+                "tittle": "bell",
+                "link": {
+                  "link_type": "Web",
+                  "url": "https://prismic.io"
+                },
+                "shortcontent": [
+                  {
+                    "type": "paragraph",
+                    "text": "Tempor in fugiat duis eu velit cupidatat aute ipsum incididunt do incididunt fugiat anim. Ex amet proident laborum pariatur.",
+                    "spans": []
+                  }
+                ],
+                "shortimage": {
+                  "dimensions": {
+                    "width": 900,
+                    "height": 500
+                  },
+                  "alt": null,
+                  "copyright": null,
+                  "url": "https://images.unsplash.com/photo-1607582278043-57198ac8da43"
+                }
+              }
+            ],
+            "primary": {
+              "tittle": [
+                {
+                  "type": "paragraph",
+                  "text": "Ut eu dolore quis commodo consequat do eu nisi duis magna irure magna. Cillum magna nisi consectetur duis culpa nulla nostrud proident et velit et tempor excepteur laborum Lorem.",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Incididunt nostrud sit nostrud dolor. Officia proident ex amet labore culpa in veniam in pariatur ut enim ullamco. Aliquip id amet sunt amet commodo culpa.",
+                  "spans": []
+                }
+              ]
+            },
+            "slice_type": "related_content"
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "extension": "js"
+        },
+        "screenshotPaths": {}
       },
       "reviews": {
         "library": "slices",

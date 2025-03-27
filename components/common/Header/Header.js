@@ -33,13 +33,37 @@ export const Header = ({
   const calltoactionUri = header?.data?.calltoactionurl.uid || {};
   // const calltoactionUri = header?.data?.calltoactionurl.url || {};
 
+  // window.console.log("--header--", header?.data?.logo?.url  )
+  
+  const blog=[ {
+    "label": "Blog",
+    "link": {
+      "id": "blog",
+      "type": "page",
+      "tags": [],
+      "lang": "en-us",
+      "slug": "blog",
+      "first_publication_date": "2024-08-25T19:24:44+0000",
+      "last_publication_date": "2024-12-20T16:06:00+0000",
+      "uid": "blog",
+      "link_type": "Document",
+      "key": "a88265c2-f56d-4a8c-90c1-7490b5892f84",
+      "isBroken": false
+    }
+  }
+]
+  
   return (
     <NavContainer>
+      {/* <pre style={{color: "white"}}>{header?.data?.logo?.url}</pre> */}
       <SectionContainer>
-        <LinkLogo />
+        <LinkLogo url={header?.data?.logo?.url}/>
         <LeftWrap>
           <ul>{renderedMenuLinks(menuLinks, pagename)}</ul>
-          {/* <pre>{JSON.stringify( calltoactionUri, null, 2)}</pre> */}
+          <ul>{renderedMenuLinks(blog, pagename)}</ul>
+        
+          
+          {/* <pre>{JSON.stringify( menuLinks, null, 2)}</pre> */}
           <Anchor id={calltoactionUri} href={calltoactionUri}>
             <ButtonContainer fullwidth={true}>
               {calltoactiontext[0]?.text || "Contact"}

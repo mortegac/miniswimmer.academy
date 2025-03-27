@@ -31,19 +31,21 @@ const LinkPage = (data, pagename) => {
     );
 };
 
-export const LinkLogo = () => (
-    <Link
-        href={`/`}
-        passHref
-    >
-        <a>
-            <picture>
-                <source srcSet={"logo.png"} media="(max-width: 500px)" />
-                <source srcSet={"logo.png"} media="(max-width: 960px)" />
-                <img src={"logo.png"} alt="Miniswimmer Academy" />
-            </picture>
-        </a>
-    </Link>
+export const LinkLogo = (url) => (
+    <>
+        <Link
+            href={`/`}
+            passHref
+        >
+            <a>
+                <picture>
+                    <source srcSet={url?.url} media="(max-width: 500px)" />
+                    <source srcSet={url?.url} media="(max-width: 960px)" />
+                    <img src={url?.url} alt="Miniswimmer Academy" />
+                </picture>
+            </a>
+        </Link>
+    </>
 );
 
 

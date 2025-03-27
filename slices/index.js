@@ -6,9 +6,11 @@ import Contact from './Contact';
 import Graduate from './Graduate';
 import Hero from './Hero';
 import Ideas from './Ideas';
+import Labels from './Labels';
 import LogoList from './LogoList';
 import Metrics from './Metrics';
 import Projects from './Projects';
+import RelatedContent from './RelatedContent';
 import Reviews from './Reviews';
 import Services from './Services';
 import Staff from './Staff';
@@ -20,9 +22,11 @@ export {
 	Graduate,
 	Hero,
 	Ideas,
+	Labels,
 	LogoList,
 	Metrics,
 	Projects,
+	RelatedContent,
 	Reviews,
 	Services,
 	Staff,
@@ -35,9 +39,11 @@ export const components = {
 	graduate: Graduate,
 	hero: Hero,
 	ideas: Ideas,
+	labels: Labels,
 	logo_list: LogoList,
 	metrics: Metrics,
 	projects: Projects,
+	related_content: RelatedContent,
 	reviews: Reviews,
 	services: Services,
 	staff: Staff,
