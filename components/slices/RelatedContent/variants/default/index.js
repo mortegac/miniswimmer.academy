@@ -1,5 +1,6 @@
 import { RichText } from "prismic-reactjs";
 import Link from "next/link";
+import Image from 'next/image'
 import { PrismicRichText } from "@prismicio/react";
 import { SliceFactory } from "../../../../common/Containers";
 import {
@@ -36,10 +37,19 @@ const Base = (props) => {
             <Card>
               <CardImage>
                 <div className="image">
-                  <img 
+                  {/* <img 
                     src={post?.shortimage?.url}
                       alt={"item-image"}
-                      />
+                      /> */}
+                      <Image
+                    src={post?.shortimage?.url}
+                    alt={"Miniswimmer Academy"}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                    priority
+                  /> 
+                  
                 </div>
               </CardImage> 
               <CardContent>
@@ -56,20 +66,6 @@ const Base = (props) => {
             
           </ItemsWrapper>
           
-        {/* <ItemsContainer>
-         
-          {Array.isArray(props.items)
-            ? props.items.map((box, index) => {
-              
-              return (
-                <pre>{JSON.stringify(box, null, 2) }</pre>
-                // <p className="item" key={`label-item-${index}`}>{box?.label}</p>
-                
-              ) 
-            })
-            : null}
-        </ItemsContainer> */}
-
 
       </Description>
     </Content>

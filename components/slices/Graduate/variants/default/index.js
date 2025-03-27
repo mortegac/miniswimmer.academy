@@ -40,14 +40,22 @@ const Base = (props) => {
                   <ListContainer>
                     {/* <img src={box?.image?.url || "-"} alt="" /> */}
                     
-                <Image
+                    <Image
+                    src={box?.image?.url}
+                    alt={"Nuestros Alumnos certificados en Miniswimmer Academy"}
+                    width={120}    // Ancho específico
+                    height={120}   // Alto específico
+                    objectFit="cover"
+                  />
+                  
+                {/* <Image
                   src={box?.image?.url || "-"}
                   alt="Alumno certificado Miniswimmer Academy"
                   // width={500} automatically provided
                   // height={500} automatically provided
                   // blurDataURL="data:..." automatically provided
                   // placeholder="blur" // Optional blur-up while loading
-                  />
+                  /> */}
                     <DataContainer>
                       <TextContainer>
                         <p className="flag">{TypeOfFlag}</p>

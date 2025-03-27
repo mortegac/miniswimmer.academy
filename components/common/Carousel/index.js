@@ -48,14 +48,22 @@ export const Carousel = ({ items }) => {
                 <div className='imageBox'>
                   {/* <img src={slide?.image?.url || "-"} alt="" /> */}
                   
-                <Image
+                  <Image
+                    src={slide?.image?.url}
+                    alt={"Testimonios de nuestros Alumnos certificados en Miniswimmer Academy"}
+                    width={120}    // Ancho específico
+                    height={120}   // Alto específico
+                    objectFit="cover"
+                  />
+
+                {/* <Image
                   src={slide?.image?.url || "-"}
-                  alt="Testimonios de nuestros Alumnos certificados en Miniswimmer Academy"
+                  alt=""
                   // width={500} automatically provided
                   // height={500} automatically provided
                   // blurDataURL="data:..." automatically provided
                   // placeholder="blur" // Optional blur-up while loading
-                  />
+                  /> */}
                   <div className="boxNameStart">                 
                     <PrismicRichText field={slide.name}/>
                     <div className="boxStart">

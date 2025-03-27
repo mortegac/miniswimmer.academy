@@ -59,14 +59,30 @@ export default function BlogPost(props) {
           <article key={page.id} className="border rounded-lg p-4">
             <Header>
               <div className="imagefull">
-                <Image
+              {/* <Image
+                    src={page?.data?.image?.url}
+                    alt={"Miniswimmer Academy"}
+                    width={120}    // Ancho específico
+                    height={120}   // Alto específico
+                    objectFit="cover"
+                  /> */}
+                   <Image
+                    src={page?.data?.image?.url}
+                    alt={"Miniswimmer Academy"}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                    priority
+                  /> 
+                  
+                {/* <Image
                   src={page?.data?.image?.url}
                   alt="Miniswimmer Academy"
                   // width={500} automatically provided
                   // height={500} automatically provided
                   // blurDataURL="data:..." automatically provided
                   // placeholder="blur" // Optional blur-up while loading
-                  />
+                  /> */}
                 {/* <img
                   src={page?.data?.image?.url}
                   alt={"item-image"}

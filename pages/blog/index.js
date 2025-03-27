@@ -60,18 +60,27 @@ export default function Blog({ posts, menu, footer }) {
                     </div>
                     )} */}
                     <div className="image">
-                      <Image
+                    {/* <img src={post?.data?.image?.url}
+                        // src={"https://somoswoko.com/wp-content/uploads/2025/03/Peak-End-Rule.png"}
+                        alt={"item-image"}
+                        /> */}
+                    <Image
+                    src={post?.data?.image?.url}
+                    alt={"Miniswimmer Academy"}
+                    layout="fill"
+                    objectFit="cover"
+                    objectPosition="center"
+                    priority
+                  /> 
+                      {/* <Image
                         src={post?.data?.image?.url}
                         alt="Miniswimmer Academy"
                         // width={500} automatically provided
                         // height={500} automatically provided
                         // blurDataURL="data:..." automatically provided
                         // placeholder="blur" // Optional blur-up while loading
-                      />
-                      {/* <img src={post?.data?.image?.url}
-                        // src={"https://somoswoko.com/wp-content/uploads/2025/03/Peak-End-Rule.png"}
-                        alt={"item-image"}
-                        /> */}
+                      /> */}
+                     
                     </div>
                     <h3>{post?.data?.title}</h3>
                   {/* {post?.data?.title && <PrismicRichText field={post?.data?.title} />} */}
