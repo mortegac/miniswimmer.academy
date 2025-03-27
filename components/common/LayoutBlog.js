@@ -31,7 +31,7 @@ export const LayoutBlog = (props) => {
         
         <link
           rel="canonical"
-          href={`${activeDocMeta.sitename}/blog/${linkResolver(page)}`}
+          href={`${activeDocMeta.sitename}${linkResolver(page)}`}
         />
         {getMetaTags(
           {
