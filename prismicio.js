@@ -29,6 +29,9 @@ export const linkResolver = doc => {
   if (properties.type === "page") {
     return `/${properties.uid}`;
   }
+  if (properties.type === "blog") {
+    return `/blog/${properties.uid}`;
+  }
 
   return "/";
 };
