@@ -18,7 +18,7 @@ export const Body = styled.body`
 export const Layout = (props) => {
   const { children, header, footer, page, activeDocMeta } = props;
 
-  const title = page?.data?.seoTitle || "miniswimmer.academy";
+  const title = page?.data?.seotitle || "miniswimmer.academy";
   const description = page?.data?.seodescription || "-";
 
   return (

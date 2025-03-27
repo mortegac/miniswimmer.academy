@@ -11,6 +11,7 @@
 import React from "react";
 import Head from "next/head";
 import Link from 'next/link'
+import Image from 'next/image'
 
 import * as prismicH from "@prismicio/helpers";
 import { SliceZone } from "@prismicio/react";
@@ -58,10 +59,18 @@ export default function BlogPost(props) {
           <article key={page.id} className="border rounded-lg p-4">
             <Header>
               <div className="imagefull">
-                <img
+                <Image
+                  src={page?.data?.image?.url}
+                  alt="Miniswimmer Academy"
+                  // width={500} automatically provided
+                  // height={500} automatically provided
+                  // blurDataURL="data:..." automatically provided
+                  // placeholder="blur" // Optional blur-up while loading
+                  />
+                {/* <img
                   src={page?.data?.image?.url}
                   alt={"item-image"}
-                  />
+                  /> */}
               </div>
             </Header>
             <h2 className="text-2xl font-semibold">

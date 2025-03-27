@@ -1,5 +1,5 @@
 import { RichText } from "prismic-reactjs";
-
+import Image from 'next/image'
 import { SliceFactory } from "../../../../common/Containers";
 import {
   Description,
@@ -38,7 +38,16 @@ const Base = (props) => {
               return (
                 <li className="item" key={`box-item-${index}`}>
                   <ListContainer>
-                    <img src={box?.image?.url || "-"} alt="" />
+                    {/* <img src={box?.image?.url || "-"} alt="" /> */}
+                    
+                <Image
+                  src={box?.image?.url || "-"}
+                  alt="Alumno certificado Miniswimmer Academy"
+                  // width={500} automatically provided
+                  // height={500} automatically provided
+                  // blurDataURL="data:..." automatically provided
+                  // placeholder="blur" // Optional blur-up while loading
+                  />
                     <DataContainer>
                       <TextContainer>
                         <p className="flag">{TypeOfFlag}</p>
