@@ -15,6 +15,11 @@ export default class MyDocument extends Document {
             crossOrigin="true"
           />
           <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+          <link rel="alternate" hreflang="en-CL" href="https://miniswimmer.cl/" />
+          <link rel="alternate" hreflang="en-US" href="https://miniswimmer.us/" />
+          <link rel="alternate" hreflang="es" href="https://miniswimmer.academy/" />
+          <link rel="alternate" hreflang="x-default" href="https://miniswimmer.org/" />
+
         </Head>
         <body>
 
