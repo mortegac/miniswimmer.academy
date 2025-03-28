@@ -41,6 +41,15 @@ const Footer = ({
         <FooterList title={"Academy"} items={items} />
         <SocialLinks socialTitle={" "} />
       </FooterItemsContainer>
+     <div class="international-sites">
+        <h3>Conozca los Sitios de la compañia</h3>
+        <nav>
+            <a href="https://miniswimmer.cl/" hreflang="es">miniswimmer Chile</a>
+            <a href="https://miniswimmer.us/" hreflang="en-US">US miniswimmer</a>
+            <a href="https://miniswimmer.academy/" hreflang="en">Academia</a>
+            <a href="https://miniswimmer.org/" hreflang="x-default">Fundación</a>
+        </nav>
+    </div>
     </FooterWrapper>
   );
 };
